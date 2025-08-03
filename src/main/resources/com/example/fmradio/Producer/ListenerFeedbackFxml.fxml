@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="529.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Producer.ListenerFeedbackFxmlController">
+   <children>
+      <TextArea fx:id="summaryTextArea" layoutX="417.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
+      <TableView fx:id="feedbackTableView" layoutX="73.0" layoutY="254.0" prefHeight="200.0" prefWidth="453.0">
+        <columns>
+          <TableColumn fx:id="commentCol" prefWidth="193.99996948242188" text="Comment" />
+          <TableColumn fx:id="typeCol" prefWidth="114.6666259765625" text="Type" />
+            <TableColumn fx:id="segmentCol" prefWidth="145.3333740234375" text="Segement" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="selectCategoryComboBox" layoutX="129.0" layoutY="101.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="105.0" text="Select category" />
+      <Label fx:id="confirmationLabel" layoutX="163.0" layoutY="473.0" prefHeight="42.0" prefWidth="246.0" text="Label" />
+      <Label layoutX="73.0" layoutY="485.0" text="Confirmation" />
+      <Label layoutX="512.0" layoutY="214.0" text="Summary" />
+      <Label layoutX="272.0" layoutY="231.0" text="Feedback" />
+      <Button layoutX="20.0" layoutY="172.0" mnemonicParsing="false" onAction="#receiveCommentOA" text="Receive Comments" />
+      <Button layoutX="178.0" layoutY="172.0" mnemonicParsing="false" onAction="#categorizeOA" text="Categorize" />
+      <Button layoutX="292.0" layoutY="172.0" mnemonicParsing="false" onAction="#submitSummaryOA" text="Submit Summary" />
+      <Button layoutX="473.0" layoutY="473.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Main Menu" />
+   </children>
+</AnchorPane>

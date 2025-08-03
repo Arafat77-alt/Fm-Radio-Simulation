@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="498.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.StationManager.ReviewAdvertiserFxmlController">
+   <children>
+      <TableView fx:id="advertiserUsageTableView" layoutX="6.0" layoutY="263.0" prefHeight="200.0" prefWidth="683.0">
+        <columns>
+          <TableColumn fx:id="advertiserNameCol" prefWidth="99.33331537246704" text="Advertiser Name" />
+          <TableColumn fx:id="adTitleCol" prefWidth="107.99999237060547" text="Ad Title" />
+            <TableColumn fx:id="scheduleTimeCol" prefWidth="100.00001525878906" text="Scheduled Time" />
+            <TableColumn fx:id="durationCol" prefWidth="68.6666259765625" text="Duration" />
+            <TableColumn fx:id="numberOfPlaysCol" prefWidth="107.33331298828125" text="Number of plays" />
+            <TableColumn fx:id="costPerMInCol" prefWidth="81.33328247070312" text="Cost per Min" />
+            <TableColumn fx:id="totalCostCol" prefWidth="120.0" text="Total cost" />
+        </columns>
+      </TableView>
+      <Label layoutX="272.0" layoutY="231.0" text="Advertiser Usage Report" />
+      <TextArea fx:id="contractTermsTextArea" layoutX="471.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="557.0" layoutY="223.0" text="Contract Terms" />
+      <Button layoutX="59.0" layoutY="53.0" mnemonicParsing="false" onAction="#loadAdReportOA" text="Load Ad Report" />
+      <Button layoutX="327.0" layoutY="53.0" mnemonicParsing="false" onAction="#viewContractTermsOA" text="View Contract Terms" />
+      <Label fx:id="messageLabel" layoutX="36.0" layoutY="104.0" prefHeight="84.0" prefWidth="200.0" text="Label" />
+      <Button layoutX="375.0" layoutY="188.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Main Menu" />
+      <Button layoutX="47.0" layoutY="201.0" mnemonicParsing="false" onAction="#checkConflictsOA" text="Check Conflicts" />
+   </children>
+</AnchorPane>

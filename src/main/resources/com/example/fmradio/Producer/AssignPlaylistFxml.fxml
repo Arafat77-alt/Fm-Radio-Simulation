@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="476.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Producer.AssignPlaylistFxmlController">
+   <children>
+      <TableView fx:id="songTableTableView" layoutX="12.0" layoutY="181.0" prefHeight="200.0" prefWidth="322.0">
+        <columns>
+          <TableColumn fx:id="songTitleCol" prefWidth="124.6666259765625" text="Song Title" />
+          <TableColumn fx:id="durationCol" prefWidth="110.00003051757812" text="Duration" />
+            <TableColumn fx:id="statusCol" prefWidth="85.33331298828125" text="status" />
+        </columns>
+      </TableView>
+      <Label layoutX="134.0" layoutY="149.0" text="Uploaded Songs" />
+      <Label fx:id="messageLabel" layoutX="415.0" layoutY="289.0" prefHeight="107.0" prefWidth="190.0" text="Label" />
+      <Label layoutX="484.0" layoutY="272.0" text="Comment" />
+      <Button layoutX="56.0" layoutY="87.0" mnemonicParsing="false" onAction="#checkCopyrightOA" text="Check Copyright" />
+      <Button layoutX="240.0" layoutY="87.0" mnemonicParsing="false" onAction="#approveOA" text="Approve" />
+      <Button layoutX="365.0" layoutY="87.0" mnemonicParsing="false" onAction="#rejectOA" text="Reject" />
+      <Button layoutX="96.0" layoutY="415.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Main Menu" />
+      <Button layoutX="473.0" layoutY="93.0" mnemonicParsing="false" onAction="#notifyMusicManagerOA" text="Notify Music Manager" />
+   </children>
+</AnchorPane>
