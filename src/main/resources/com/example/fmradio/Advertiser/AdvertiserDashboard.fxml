@@ -5,18 +5,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="578.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.AdvertiserDashboardController">
+<AnchorPane prefHeight="578.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.AdvertiserDashboardController">
    <children>
       <Label alignment="CENTER" layoutX="257.0" layoutY="33.0" prefHeight="39.0" prefWidth="298.0" text="Advertiser Dashboard">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="72.0" layoutY="121.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="135.0" text="Upload Advertisement" />
-      <Button layoutX="304.0" layoutY="119.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="126.0" text="Create Poll / Contest" />
-      <Button layoutX="590.0" layoutY="109.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="102.0" text="Billing Summary" />
-      <Button layoutX="72.0" layoutY="253.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="148.0" text="Generate Listener Report" />
-      <Button layoutX="317.0" layoutY="245.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="100.0" text="Playlist Sponsor" />
+      <Button layoutX="72.0" layoutY="121.0" mnemonicParsing="false" onAction="#uploadAdvertisementOnAction" prefHeight="50.0" prefWidth="135.0" text="Upload Advertisement" />
+      <Button layoutX="304.0" layoutY="119.0" mnemonicParsing="false" onAction="#createPollAdvertiserButtonOnaction" prefHeight="58.0" prefWidth="126.0" text="Create Poll / Contest" />
+      <Button layoutX="590.0" layoutY="109.0" mnemonicParsing="false" onAction="#billSummaryOnAction" prefHeight="58.0" prefWidth="102.0" text="Billing Summary" />
+      <Button layoutX="72.0" layoutY="253.0" mnemonicParsing="false" onAction="#genetrateListenerReportOnAction" prefHeight="50.0" prefWidth="148.0" text="Generate Listener Report" />
+      <Button layoutX="317.0" layoutY="245.0" mnemonicParsing="false" onAction="#platylistSponsorOnAction" prefHeight="66.0" prefWidth="100.0" text="Playlist Sponsor" />
    </children>
 </AnchorPane>
