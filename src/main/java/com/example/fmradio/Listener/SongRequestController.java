@@ -3,8 +3,6 @@ package com.example.fmradio.Listener;
 public class SongRequestController
 {
     @javafx.fxml.FXML
-    private DatePicker dateDatePicker;
-    @javafx.fxml.FXML
     private TextField songTtitleTextfield;
     @javafx.fxml.FXML
     private TableColumn artistNameColumn;
@@ -18,6 +16,8 @@ public class SongRequestController
     private TableColumn dateColumn;
     @javafx.fxml.FXML
     private TableColumn songTitleColumn;
+    @javafx.fxml.FXML
+    private DatePicker requestdateDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {

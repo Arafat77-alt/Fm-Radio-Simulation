@@ -1,5 +1,9 @@
 package com.example.fmradio.Advertiser;
 
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.scene.control.*;
+
 public class AdvertiserPollCreation
 {
     @javafx.fxml.FXML
@@ -24,6 +28,8 @@ public class AdvertiserPollCreation
     private TableColumn subjectColumn;
     @javafx.fxml.FXML
     private TextField questioNoTexField;
+    @javafx.fxml.FXML
+    private TableView createPollTableView;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -33,9 +39,6 @@ public class AdvertiserPollCreation
     public void validatePollButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void createPollTableView(Event event) {
-    }
 
     @javafx.fxml.FXML
     public void createPollButtonOnAction(ActionEvent actionEvent) {

@@ -21,7 +21,7 @@
       <Button layoutX="522.0" layoutY="223.0" mnemonicParsing="false" onAction="#createPollButtonOnAction" prefHeight="62.0" prefWidth="109.0" text="Create Poll" />
       <DatePicker fx:id="dateDatePicker" layoutX="467.0" layoutY="107.0" />
       <Label layoutX="430.0" layoutY="111.0" text="Date:" />
-      <TableView layoutX="31.0" layoutY="313.0" onSort="#createPollTableView" prefHeight="200.0" prefWidth="226.0">
+      <TableView fx:id="createPollTableView" layoutX="31.0" layoutY="313.0" prefHeight="200.0" prefWidth="226.0">
         <columns>
           <TableColumn fx:id="questionNoColum" prefWidth="88.00005912780762" text="Question No." />
           <TableColumn fx:id="subjectColumn" prefWidth="62.39990997314453" text="Subject" />
