@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.RepordAdController">
+<AnchorPane prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.ReportShowController">
    <children>
       <Label layoutX="60.0" layoutY="44.0" text="Listener Id:" />
       <TextField fx:id="listenerIDTextField" layoutX="131.0" layoutY="40.0" />

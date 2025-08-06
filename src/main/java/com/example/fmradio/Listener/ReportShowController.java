@@ -1,9 +1,6 @@
-package com.example.fmradio.Advertiser;
+package com.example.fmradio.Listener;
 
-import javafx.event.ActionEvent;
-import javafx.scene.control.*;
-
-public class RepordAdController
+public class ReportShowController
 {
     @javafx.fxml.FXML
     private DatePicker reportdateDatePicker;
