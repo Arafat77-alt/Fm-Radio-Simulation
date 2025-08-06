@@ -9,7 +9,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="532.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.ScheduleAdvertisementController">
    <children>
       <Label layoutX="88.0" layoutY="70.0" text="Ad Title" />
@@ -37,6 +36,6 @@
         </columns>
       </TableView>
       <Label layoutX="88.0" layoutY="26.0" text="Advertiser ID:" />
-      <TextField layoutX="160.0" layoutY="22.0" />
+      <TextField layoutX="174.0" layoutY="22.0" />
    </children>
 </AnchorPane>
