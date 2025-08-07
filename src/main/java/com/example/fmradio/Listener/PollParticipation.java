@@ -1,0 +1,52 @@
+package com.example.fmradio.Listener;
+
+import java.time.LocalDateTime;
+
+public class PollParticipation {
+    private String listenerId;
+    private String pollTitle;
+    private String selectedOption;
+    private LocalDateTime dateTime;
+
+    public PollParticipation(String listenerId, String pollTitle, String selectedOption, LocalDateTime dateTime) {
+        this.listenerId = listenerId;
+        this.pollTitle = pollTitle;
+        this.selectedOption = selectedOption;
+        this.dateTime = dateTime;
+    }
+
+    public String getListenerId() {
+        return listenerId;
+    }
+
+    public void setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+    }
+
+    public String getPollTitle() {
+        return pollTitle;
+    }
+
+    public void setPollTitle(String pollTitle) {
+        this.pollTitle = pollTitle;
+    }
+
+    public String getSelectedOption() {
+        return selectedOption;
+    }
+
+    public void setSelectedOption(String selectedOption) {
+        this.selectedOption = selectedOption;
+    }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+
+
+}
