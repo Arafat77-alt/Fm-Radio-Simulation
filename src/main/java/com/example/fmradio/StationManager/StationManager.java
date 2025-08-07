@@ -2,7 +2,7 @@ package com.example.fmradio.StationManager;
 
 public class StationManager {
 
-       // Goal 1: Approve weekly program schedule
+
         public void receiveProposedSchedule() {
 
         }

@@ -1,6 +1,10 @@
 package com.example.fmradio.StationManager;
 
-public class Staff {
+import java.io.Serializable;
+
+public class Staff implements Serializable {
+    private static final long serialVersionUID = 1L;
+
         private String name;
         private String role;
         private boolean available;
@@ -43,6 +47,9 @@ public class Staff {
 
     public void setPerformanceNote(String performanceNote) {
         this.performanceNote = performanceNote;
+    }
+    public String getAvailabilityText() {
+        return available ? "Available" : "Busy";
     }
 
     @Override

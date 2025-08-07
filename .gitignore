@@ -1,4 +1,7 @@
+# Ignore build output directories (for Maven, Gradle, etc.)
 target/
+
+# Allow maven-wrapper.jar and target folders in source
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -36,3 +39,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Explicitly include station_data.bin, even though we ignore other files
+!data/station_data.bin  # Ensure the binary file is pushed

@@ -2,9 +2,12 @@ package com.example.fmradio.StationManager;
 
 import javafx.scene.control.Alert;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ScheduleManager {
+public class ScheduleManager implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String showName;
     private String timeSlot;
     private String rjName;

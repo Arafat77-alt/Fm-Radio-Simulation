@@ -38,8 +38,6 @@ public class WeeklyProgramFxmlController {
     private Label conflictLabel;
     @javafx.fxml.FXML
     private Label messageLabel;
-
-    private ObservableList<ScheduleManager> scheduleList = FXCollections.observableArrayList();
     @javafx.fxml.FXML
     private TableColumn<ScheduleManager,String> statusCol;
 
@@ -53,85 +51,74 @@ public class WeeklyProgramFxmlController {
         showNameCol.setCellValueFactory(new PropertyValueFactory<>("showName"));
         statusCol.setCellValueFactory(new  PropertyValueFactory<>("status"));
 
-        scheduleTableView.setItems(scheduleList);
-
+        scheduleTableView.setItems(SharedData.stationData.getScheduleList());
+        scheduleTableView.refresh();
 
     }
 
     @javafx.fxml.FXML
     public void addToTableOA(ActionEvent actionEvent) {
-        String name = showNameTF.getText();
-        String time = showTimeTF.getText();
-        String rj = rjNameTF.getText();
-        String producer = producerNameTF.getText();
-        LocalDate date = showDateDP.getValue();
+
+            String name = showNameTF.getText();
+            String time = showTimeTF.getText();
+            String rj = rjNameTF.getText();
+            String producer = producerNameTF.getText();
+            LocalDate date = showDateDP.getValue();
+
+            if (name.isEmpty() || time.isEmpty() || rj.isEmpty() || producer.isEmpty()) {
+                messageLabel.setText("Please Enter Required Information");
+                return;
+            }
 
 
-
-        if (name.isEmpty() || time.isEmpty() || rj.isEmpty() || producer.isEmpty() ) {
-            messageLabel.setText("PLease Enter Required Information");
-            return;
-
-        }
-
-        System.out.println("Adding: " + name + ", " + time + ", " + rj + ", " + producer + ", " + date);
-
-        scheduleList.add(new ScheduleManager(name, time, rj, producer, date));
-        clearFields();
-        messageLabel.setText("Added to schedule!");
+            SharedData.stationData.getScheduleList().add(new ScheduleManager(name, time, rj, producer, date));
 
 
+            BinaryFileUtil.saveStationData(SharedData.stationData, "C:/intasgo.com/data/station_data.bin");
+
+            clearFields();
+            messageLabel.setText("Added to schedule!");
     }
-
     @javafx.fxml.FXML
     public void receiveProposalOA(ActionEvent actionEvent) {
-        long pendingCount = scheduleList.stream()
-                .filter(entry -> entry.getStatus().equalsIgnoreCase("Pending"))
+        long pendingCount = SharedData.stationData.getScheduleList().stream()
+                .filter(s -> "Pending".equalsIgnoreCase(s.getStatus()))
                 .count();
-
-        outputLabel.setText(" You have " + pendingCount + " pending show proposals.");
-
+        outputLabel.setText("You have " + pendingCount + " pending show proposals.");
     }
+
 
     @javafx.fxml.FXML
     public void checkConflictOA(ActionEvent actionEvent) {
-        for (int i = 0; i < scheduleList.size(); i++) {
-            ScheduleManager entry1 = scheduleList.get(i);
-            for (int j = i + 1; j < scheduleList.size(); j++) {
-                ScheduleManager entry2 = scheduleList.get(j);
-
-                if (entry1.getShowDate().equals(entry2.getShowDate()) &&
-                        entry1.getTimeSlot().equalsIgnoreCase(entry2.getTimeSlot())) {
-
-                    conflictLabel.setText(" Conflict between \"" + entry1.getShowName() +
-                            "\" and \"" + entry2.getShowName() +
-                            "\" on " + entry1.getShowDate() +
-                            " at " + entry1.getTimeSlot());
-                    return;
-                }
-            }
+        ScheduleManager selected = scheduleTableView.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            outputLabel.setText("Please select a show to approve.");
+            return;
         }
+        selected.setStatus("Approved");
+        scheduleTableView.refresh();
 
 
-        conflictLabel.setText("✅ No conflicts found.");
+        BinaryFileUtil.saveStationData(SharedData.stationData, "C:/intasgo.com/data/station_data.bin");
+        outputLabel.setText("'" + selected.getShowName() + "' approved for broadcast.");
     }
 
     @javafx.fxml.FXML
     public void approveScheduleOA(ActionEvent actionEvent) {
         ScheduleManager selected = scheduleTableView.getSelectionModel().getSelectedItem();
-
         if (selected == null) {
-            outputLabel.setText(" Please select a show to approve.");
+            outputLabel.setText("Please select a show to approve.");
             return;
         }
-
         selected.setStatus("Approved");
-        scheduleTableView.refresh();  // needed to update table display
-        outputLabel.setText("✅ \"" + selected.getShowName() + "\" approved for broadcast.");
+        scheduleTableView.refresh();
 
+        // Save updated schedule list to the file
+        BinaryFileUtil.saveStationData(SharedData.stationData, "C:/intasgo.com/data/station_data.bin");
+        outputLabel.setText("'" + selected.getShowName() + "' approved for broadcast.");
     }
+
     private void clearFields() {
-        showTimeTF.clear();
         showTimeTF.clear();
         rjNameTF.clear();
         producerNameTF.clear();

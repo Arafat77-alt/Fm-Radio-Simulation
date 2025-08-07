@@ -40,7 +40,7 @@ public class AssignFxmlController
     private TextArea performanceReportTA;
 
 
-    private final ObservableList<ScheduleManager> scheduleList = SharedData.scheduleList;
+    private final ObservableList<ScheduleManager> scheduleList = SharedData.stationData.getScheduleList();
     private final ObservableList<Staff> rjList = FXCollections.observableArrayList();
     private final ObservableList<Staff> producerList = FXCollections.observableArrayList();
     @FXML
@@ -65,10 +65,10 @@ public class AssignFxmlController
         ShowDateCol.setCellValueFactory(new PropertyValueFactory<>("showDate"));
         producerNameCol.setCellValueFactory(new PropertyValueFactory<>("producerName"));
         rjNameCol.setCellValueFactory(new PropertyValueFactory<>("rjName"));
-        showTableView.setItems(scheduleList);
+        showTableView.setItems(SharedData.stationData.getScheduleList());
 
         rjTableViewCOl.setCellValueFactory(new PropertyValueFactory<>("name"));
-        rjTableView.setItems(rjList);
+        rjTableView.setItems(SharedData.stationData.getRjList());
         rjTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 assignRjTF.setText(newVal.getName());
@@ -78,7 +78,7 @@ public class AssignFxmlController
 
 
         producerTableViewCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        producerTV.setItems(producerList);
+        producerTV.setItems(SharedData.stationData.getProducerList());
         producerTV.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 assignProducerTF.setText(newVal.getName());
@@ -117,10 +117,13 @@ public class AssignFxmlController
 
         selectedShow.setRjName(rj);
         selectedShow.setProducerName(producer);
-        messageLabel.setText("✔ Assigned " + rj + " and " + producer + " to the show: " + selectedShow.getShowName());
+        messageLabel.setText(" Assigned " + rj + " and " + producer + " to the show: " + selectedShow.getShowName());
 
-        // Refresh the table view to reflect changes
+
         showTableView.refresh();
+        rjTableView.refresh();
+        producerTV.refresh();
+
 
     }
 
