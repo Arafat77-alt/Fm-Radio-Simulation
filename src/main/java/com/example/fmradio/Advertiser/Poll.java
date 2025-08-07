@@ -35,5 +35,12 @@ public class Poll {
         Subject = subject;
     }
 
-
+    @Override
+    public String toString() {
+        return "Poll{" +
+                "pollId='" + pollId + '\'' +
+                ", advertiserId='" + advertiserId + '\'' +
+                ", Subject='" + Subject + '\'' +
+                '}';
+    }
 }

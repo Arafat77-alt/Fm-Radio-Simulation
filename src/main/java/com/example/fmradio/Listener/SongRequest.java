@@ -58,6 +58,17 @@ public class SongRequest {
     }
 
 
+    @Override
+    public String toString() {
+        return "SongRequest{" +
+                "listenerId='" + listenerId + '\'' +
+                ", songTitle='" + songTitle + '\'' +
+                ", artistName='" + artistName + '\'' +
+                ", shoutout='" + shoutout + '\'' +
+                ", dateTime=" + dateTime +
+                '}';
+    }
+
     private boolean validateSongRequest(String songTitle, String artistName, String shoutout) {
             if (songTitle == null || songTitle.isEmpty()) {
                 return false;

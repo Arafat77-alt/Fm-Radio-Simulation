@@ -76,4 +76,17 @@ public class Advertisement {
     public void setTimeSlot(String timeSlot) {
         this.timeSlot = timeSlot;
     }
+
+    @Override
+    public String toString() {
+        return "Advertisement{" +
+                "adId='" + adId + '\'' +
+                ", advertiserId='" + advertiserId + '\'' +
+                ", title='" + title + '\'' +
+                ", duration=" + duration +
+                ", category='" + category + '\'' +
+                ", date=" + date +
+                ", timeSlot='" + timeSlot + '\'' +
+                '}';
+    }
 }

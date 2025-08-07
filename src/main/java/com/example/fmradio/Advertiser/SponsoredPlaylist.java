@@ -37,4 +37,13 @@ public class SponsoredPlaylist {
     public void setSponsorshipDate(LocalDate sponsorshipDate) {
         this.sponsorshipDate = sponsorshipDate;
     }
+
+    @Override
+    public String toString() {
+        return "SponsoredPlaylist{" +
+                "advertiserId='" + advertiserId + '\'' +
+                ", playlistName='" + playlistName + '\'' +
+                ", sponsorshipDate=" + sponsorshipDate +
+                '}';
+    }
 }

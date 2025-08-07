@@ -39,5 +39,12 @@ public class Listener {
 
     };
 
-
+    @Override
+    public String toString() {
+        return "Listener{" +
+                "listenerID='" + listenerID + '\'' +
+                ", region='" + region + '\'' +
+                ", gender='" + gender + '\'' +
+                '}';
+    }
 }

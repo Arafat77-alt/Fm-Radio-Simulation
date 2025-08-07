@@ -67,6 +67,15 @@ public class BookMarkFavourite {
         this.category = category;
     }
 
-    
-
+    @Override
+    public String toString() {
+        return "BookMarkFavourite{" +
+                "listenerId='" + listenerId + '\'' +
+                ", showId='" + showId + '\'' +
+                ", showTitle='" + showTitle + '\'' +
+                ", genre='" + genre + '\'' +
+                ", date=" + date +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }

@@ -36,4 +36,13 @@ public class Playlist {
     public void setDateOfCreate(LocalDate dateOfCreate) {
         this.dateOfCreate = dateOfCreate;
     }
+
+    @Override
+    public String toString() {
+        return "Playlist{" +
+                "listenerID='" + listenerID + '\'' +
+                ", playListName='" + playListName + '\'' +
+                ", dateOfCreate=" + dateOfCreate +
+                '}';
+    }
 }

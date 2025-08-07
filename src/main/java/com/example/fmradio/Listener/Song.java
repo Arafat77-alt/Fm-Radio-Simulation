@@ -67,5 +67,15 @@ public class Song {
         this.releaseDate = releaseDate;
     }
 
-
+    @Override
+    public String toString() {
+        return "Song{" +
+                "songId='" + songId + '\'' +
+                ", title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", genre='" + genre + '\'' +
+                ", duration=" + duration +
+                ", releaseDate=" + releaseDate +
+                '}';
+    }
 }

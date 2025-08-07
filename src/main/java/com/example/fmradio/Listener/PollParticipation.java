@@ -47,6 +47,13 @@ public class PollParticipation {
         this.dateTime = dateTime;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "PollParticipation{" +
+                "listenerId='" + listenerId + '\'' +
+                ", pollTitle='" + pollTitle + '\'' +
+                ", selectedOption='" + selectedOption + '\'' +
+                ", dateTime=" + dateTime +
+                '}';
+    }
 }

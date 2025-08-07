@@ -36,5 +36,12 @@ public class Advertiser {
         this.companyName = companyName;
     }
 
-
+    @Override
+    public String toString() {
+        return "Advertiser{" +
+                "advertiserId='" + advertiserId + '\'' +
+                ", name='" + name + '\'' +
+                ", companyName='" + companyName + '\'' +
+                '}';
+    }
 }

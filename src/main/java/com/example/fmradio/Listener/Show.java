@@ -56,4 +56,15 @@ public class Show {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
+    @Override
+    public String toString() {
+        return "Show{" +
+                "showId='" + showId + '\'' +
+                ", title='" + title + '\'' +
+                ", airDate=" + airDate +
+                ", duration=" + duration +
+                ", genre='" + genre + '\'' +
+                '}';
+    }
 }
