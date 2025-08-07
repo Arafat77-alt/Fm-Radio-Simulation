@@ -5,19 +5,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="548.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.ListenerDashboard">
+<AnchorPane prefHeight="548.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.ListenerDashboardController">
    <children>
       <Label layoutX="275.0" layoutY="30.0" text="Listener Dashboard">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Button fx:id="songRequestButton" layoutX="79.0" layoutY="124.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="90.0" text="Song Request" />
-      <Button layoutX="301.0" layoutY="118.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="106.0" text="Poll participation" />
-      <Button layoutX="529.0" layoutY="115.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="90.0" text="Rate Show" />
-      <Button layoutX="87.0" layoutY="302.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="106.0" text="Book Mark" />
-      <Button layoutX="315.0" layoutY="302.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="100.0" text="Report" />
-      <Button layoutX="529.0" layoutY="302.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="106.0" text="Song History" />
+      <Button layoutX="79.0" layoutY="124.0" mnemonicParsing="false" onAction="#songRequestButton" prefHeight="60.0" prefWidth="90.0" text="Song Request" />
+      <Button layoutX="301.0" layoutY="118.0" mnemonicParsing="false" onAction="#pollParticipationButtonOnAction" prefHeight="72.0" prefWidth="106.0" text="Poll participation" />
+      <Button layoutX="529.0" layoutY="115.0" mnemonicParsing="false" onAction="#rateShowButtonOnAction" prefHeight="72.0" prefWidth="90.0" text="Rate Show" />
+      <Button layoutX="87.0" layoutY="302.0" mnemonicParsing="false" onAction="#bookMarkButtonOnAction" prefHeight="86.0" prefWidth="106.0" text="Book Mark" />
+      <Button layoutX="315.0" layoutY="302.0" mnemonicParsing="false" onAction="#reportButtonOnAction" prefHeight="86.0" prefWidth="100.0" text="Report" />
+      <Button layoutX="529.0" layoutY="302.0" mnemonicParsing="false" onAction="#songHistoryButtonOnAction" prefHeight="86.0" prefWidth="106.0" text="Song History" />
    </children>
 </AnchorPane>
