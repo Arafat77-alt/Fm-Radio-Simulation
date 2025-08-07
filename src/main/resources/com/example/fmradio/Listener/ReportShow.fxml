@@ -18,12 +18,11 @@
       <Label layoutX="62.0" layoutY="128.0" text="Show title" />
       <TextField fx:id="showTitleTextField" layoutX="132.0" layoutY="124.0" />
       <Button layoutX="417.0" layoutY="60.0" mnemonicParsing="false" onAction="#submitReportButtonONaction" prefHeight="50.0" prefWidth="80.0" text="Submit" />
-      <TableView fx:id="listenerReportTableView" layoutX="32.0" layoutY="214.0" prefHeight="200.0" prefWidth="554.0">
+      <TableView fx:id="listenerReportTableView" layoutX="32.0" layoutY="214.0" prefHeight="200.0" prefWidth="387.0">
         <columns>
-          <TableColumn fx:id="listenerIdColumn" prefWidth="90.39996337890625" text="Listener Id" />
-          <TableColumn fx:id="reasonColumn" prefWidth="120.800048828125" text="Reason" />
             <TableColumn fx:id="showTitleColumn" prefWidth="128.0" text="Show title" />
-            <TableColumn fx:id="dateDatePicker" prefWidth="215.20001220703125" text="Date" />
+            <TableColumn fx:id="showTitleColumn1" prefWidth="128.0" text="Reason" />
+            <TableColumn fx:id="showTitleColumn11" prefWidth="128.0" text="Date" />
         </columns>
       </TableView>
       <DatePicker fx:id="reportdateDatePicker" layoutX="125.0" layoutY="168.0" />
