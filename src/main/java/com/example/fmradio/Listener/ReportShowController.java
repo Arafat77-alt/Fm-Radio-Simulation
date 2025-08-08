@@ -1,5 +1,8 @@
 package com.example.fmradio.Listener;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class ReportShowController
 {
     @javafx.fxml.FXML
