@@ -52,7 +52,6 @@ public class CreatePlaylistController
     @javafx.fxml.FXML
     public void historyPLayListButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-//        Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("PlayListCreateHistory.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("New scene");

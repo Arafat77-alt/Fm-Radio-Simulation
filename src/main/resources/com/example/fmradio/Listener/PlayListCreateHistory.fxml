@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,5 +14,6 @@
             <TableColumn fx:id="dateCreateplaylistCol" prefWidth="116.0" text="Date Created" />
          </columns>
       </TableView>
+      <Button layoutX="23.0" layoutY="23.0" mnemonicParsing="false" onAction="#backButtonforCreatePLaylistPageOnAction" text="Back" />
    </children>
 </AnchorPane>

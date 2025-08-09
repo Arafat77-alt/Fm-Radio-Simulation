@@ -1,9 +1,16 @@
 package com.example.fmradio.Listener;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -29,5 +36,15 @@ public class PlayListCreateHistoryController
         playListTableview.getItems().addAll(playListArrayList);
 
 
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonforCreatePLaylistPageOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("CreatePlaylist.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("New scene");
+        stage.setScene(scene);
+        stage.show();
     }
 }
