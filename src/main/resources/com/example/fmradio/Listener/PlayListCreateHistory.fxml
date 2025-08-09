@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.PlayListCreateHistoryController">
+   <children>
+      <TableView fx:id="playListTableview" layoutX="120.0" layoutY="63.0" prefHeight="274.0" prefWidth="322.0">
+         <columns>
+            <TableColumn fx:id="playListNameCol" prefWidth="92.800048828125" text="Playlist Name" />
+            <TableColumn fx:id="numberSongCol" prefWidth="116.0" text="Number of Songs" />
+            <TableColumn fx:id="dateCreateplaylistCol" prefWidth="116.0" text="Date Created" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

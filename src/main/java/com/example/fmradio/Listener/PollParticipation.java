@@ -3,25 +3,17 @@ package com.example.fmradio.Listener;
 import java.time.LocalDateTime;
 
 public class PollParticipation {
-    private String listenerId;
     private String pollTitle;
     private String selectedOption;
     private LocalDateTime dateTime;
 
     public PollParticipation(String listenerId, String pollTitle, String selectedOption, LocalDateTime dateTime) {
-        this.listenerId = listenerId;
+
         this.pollTitle = pollTitle;
         this.selectedOption = selectedOption;
         this.dateTime = dateTime;
     }
 
-    public String getListenerId() {
-        return listenerId;
-    }
-
-    public void setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-    }
 
     public String getPollTitle() {
         return pollTitle;
@@ -50,7 +42,6 @@ public class PollParticipation {
     @Override
     public String toString() {
         return "PollParticipation{" +
-                "listenerId='" + listenerId + '\'' +
                 ", pollTitle='" + pollTitle + '\'' +
                 ", selectedOption='" + selectedOption + '\'' +
                 ", dateTime=" + dateTime +
