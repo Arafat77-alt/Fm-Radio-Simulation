@@ -14,6 +14,6 @@
             <TableColumn fx:id="dateCreateplaylistCol" prefWidth="116.0" text="Date Created" />
          </columns>
       </TableView>
-      <Button layoutX="23.0" layoutY="23.0" mnemonicParsing="false" onAction="#backButtonforCreatePLaylistPageOnAction" text="Back" />
+      <Button fx:id="backtoCreatePlaylistFXID" layoutX="23.0" layoutY="23.0" mnemonicParsing="false" onAction="#backButtonforCreatePLaylistPageOnAction" text="Back" />
    </children>
 </AnchorPane>
