@@ -1,10 +1,9 @@
 package com.example.fmradio.Listener;
 
 import com.example.fmradio.HelloApplication;
+import com.example.fmradio.Listener.CreatePlayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -36,15 +35,13 @@ public class PlayListCreateHistoryController
         numberSongCol.setCellValueFactory(new PropertyValueFactory<>("noOfSongs"));
         dateCreateplaylistCol.setCellValueFactory(new PropertyValueFactory<>("dateofcreateplayList"));
 
-        ArrayList<CreatePlayList> playListArrayList = Playlist.playListArrayList;
-        playListTableview.getItems().addAll(playListArrayList);
     }
 
     @javafx.fxml.FXML
-    public void backButtonforCreatePLaylistPageOnAction(ActionEvent actionEvent) throws IOException {
+    public void backButtonforCreatePLaylistPageOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CreatePlaylist.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
+            FXMLLoader myfxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CreatePlaylist.fxml"));
+            Scene scene = new Scene(myfxmlLoader.load());
 
             Stage dupstage = (Stage) backtoCreatePlaylistFXID.getScene().getWindow();
             dupstage.setTitle("PDF view");
@@ -54,5 +51,12 @@ public class PlayListCreateHistoryController
         } catch (Exception e) {
 
         }
+
+
+    }
+
+    public void gethistory(ArrayList<CreatePlayList> G){
+        playListTableview.getItems().addAll(G);
+
     }
 }
