@@ -3,36 +3,16 @@ package com.example.fmradio.Listener;
 import java.time.LocalDate;
 
 public class BookMarkFavourite {
-    private String listenerId;
-    private String showId;
     private String showTitle;
     private String genre;
     private LocalDate date;
     private String category;
 
-    public BookMarkFavourite(String listenerId, String showId, String showTitle, String genre, LocalDate date, String category) {
-        this.listenerId = listenerId;
-        this.showId = showId;
+    public BookMarkFavourite( String showTitle, String genre, LocalDate date, String category) {
         this.showTitle = showTitle;
         this.genre = genre;
         this.date = date;
         this.category = category;
-    }
-
-    public String getListenerId() {
-        return listenerId;
-    }
-
-    public void setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-    }
-
-    public String getShowId() {
-        return showId;
-    }
-
-    public void setShowId(String showId) {
-        this.showId = showId;
     }
 
     public String getShowTitle() {
@@ -70,8 +50,7 @@ public class BookMarkFavourite {
     @Override
     public String toString() {
         return "BookMarkFavourite{" +
-                "listenerId='" + listenerId + '\'' +
-                ", showId='" + showId + '\'' +
+                "listenerId='" +
                 ", showTitle='" + showTitle + '\'' +
                 ", genre='" + genre + '\'' +
                 ", date=" + date +

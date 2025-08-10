@@ -1,16 +1,21 @@
 package com.example.fmradio.Advertiser;
 
+import com.example.fmradio.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class AdvertiserDashboardController
 {
+    @javafx.fxml.FXML
+    private Button createPollFXID;
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -24,14 +29,22 @@ public class AdvertiserDashboardController
     }
 
     @javafx.fxml.FXML
-    public void createPollAdvertiserButtonOnaction(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("AdvertiserPollCreation.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("New scene");
-        stage.setScene(scene);
-        stage.show();
+    public void createPollAdvertiserButtonOnaction(ActionEvent actionEvent)  {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AdvertiserPollCreation.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage dupstage = (Stage) createPollFXID.getScene().getWindow();
+            dupstage.setTitle("PDF view");
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
     }
+
+
 
     @javafx.fxml.FXML
     public void platylistSponsorOnAction(ActionEvent actionEvent) {

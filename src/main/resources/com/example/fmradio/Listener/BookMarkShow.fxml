@@ -6,15 +6,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.BookMarkShowController">
    <children>
-      <Label layoutX="78.0" layoutY="46.0" text="Show title" />
-      <Label layoutX="71.0" layoutY="83.0" text="Show genre:" />
-      <ComboBox fx:id="showTitleTextField" layoutX="138.0" layoutY="42.0" prefWidth="150.0" />
-      <ComboBox fx:id="showGenreTextField" layoutX="149.0" layoutY="79.0" prefWidth="150.0" />
+      <Label layoutX="68.0" layoutY="59.0" text="Show title" />
+      <Label layoutX="62.0" layoutY="96.0" text="Show genre:" />
+      <ComboBox fx:id="showTitleTextField" layoutX="149.0" layoutY="55.0" prefWidth="150.0" />
+      <ComboBox fx:id="showGenreTextField" layoutX="149.0" layoutY="92.0" prefWidth="150.0" />
       <DatePicker fx:id="bookMarkDateDatePicker" layoutX="149.0" layoutY="131.0" />
       <Label layoutX="62.0" layoutY="135.0" text="Book Mark date" />
       <Label layoutX="54.0" layoutY="182.0" text="Bookmark category selection" />
@@ -28,7 +27,5 @@
             <TableColumn fx:id="bookMarkCategoryColumn" prefWidth="214.4000244140625" text="Category" />
         </columns>
       </TableView>
-      <Label layoutX="77.0" layoutY="14.0" text="ListenerID" />
-      <TextField layoutX="139.0" layoutY="10.0" />
    </children>
 </AnchorPane>

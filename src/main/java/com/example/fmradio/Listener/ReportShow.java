@@ -4,28 +4,21 @@ import java.time.LocalDate;
 
 public class ReportShow {
 
-    private String listenerId;
     private String showTitle;
     private String reason;
     private String comment;
     private LocalDate reportDate;
 
 
-    public ReportShow(String listenerId, String showTitle, String reason, String comment, LocalDate reportDate) {
-        this.listenerId = listenerId;
+    public ReportShow(String showTitle, String reason, String comment, LocalDate reportDate) {
+
         this.showTitle = showTitle;
         this.reason = reason;
         this.comment = comment;
         this.reportDate = reportDate;
     }
 
-    public String getListenerId() {
-        return listenerId;
-    }
 
-    public void setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-    }
 
     public String getShowTitle() {
         return showTitle;
@@ -62,7 +55,7 @@ public class ReportShow {
     @Override
     public String toString() {
         return "ReportShow{" +
-                "listenerId='" + listenerId + '\'' +
+                "listenerId='"  +
                 ", showTitle='" + showTitle + '\'' +
                 ", reason='" + reason + '\'' +
                 ", comment='" + comment + '\'' +
