@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="467.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.StationManager.TeamPerformanceFxmlController">
    <children>
-      <TableView fx:id="showReportTableView" layoutX="81.0" layoutY="240.0" prefHeight="200.0" prefWidth="561.0">
+      <TableView fx:id="showReportTableView" layoutX="47.0" layoutY="221.0" prefHeight="200.0" prefWidth="561.0">
         <columns>
           <TableColumn fx:id="userCol" prefWidth="143.3333511352539" text="User " />
           <TableColumn fx:id="reportsCol" prefWidth="143.33334350585938" text="Reports" />
@@ -26,5 +26,6 @@
       <Button layoutX="266.0" layoutY="186.0" mnemonicParsing="false" onAction="#reviewDoneOA" text="Review Done" />
       <Label layoutX="41.0" layoutY="58.0" text="Add Comment" />
       <TextArea fx:id="showReportTextArea" layoutX="478.0" layoutY="12.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="587.0" layoutY="427.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Mainmenu" />
    </children>
 </AnchorPane>

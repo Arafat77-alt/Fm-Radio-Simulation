@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class SharedData {
 
-    private static final String DATA_PATH = "C:/intasgo.com/data/";
+    private static final String DATA_PATH = "data/";
 
     static {
         File directory = new File(DATA_PATH);

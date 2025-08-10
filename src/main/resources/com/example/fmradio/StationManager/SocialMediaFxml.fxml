@@ -13,7 +13,7 @@
       <TextArea fx:id="showReportTextArea" layoutX="331.0" layoutY="28.0" prefHeight="135.0" prefWidth="349.0" />
       <TextField fx:id="suggestionTextField" layoutX="84.0" layoutY="39.0" prefHeight="70.0" prefWidth="221.0" />
       <Label layoutX="14.0" layoutY="65.0" text="Suggestion" />
-      <TableView fx:id="reportTableView" layoutX="14.0" layoutY="242.0" prefHeight="200.0" prefWidth="648.0">
+      <TableView fx:id="reportTableView" layoutX="14.0" layoutY="227.0" prefHeight="200.0" prefWidth="648.0">
         <columns>
           <TableColumn fx:id="showNameCol" prefWidth="114.66667938232422" text="Show Name" />
           <TableColumn fx:id="reportCol" prefWidth="226.6666717529297" text="Report" />
@@ -24,5 +24,6 @@
       <Button layoutX="32.0" layoutY="189.0" mnemonicParsing="false" onAction="#openReportOA" text="Open Report" />
       <Button layoutX="143.0" layoutY="189.0" mnemonicParsing="false" onAction="#comparePerformanceOA" text="Compare Performence" />
       <Button layoutX="305.0" layoutY="189.0" mnemonicParsing="false" onAction="#archiveShowOA" text="Archive Show" />
+      <Button layoutX="294.0" layoutY="444.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Mainmenu" />
    </children>
 </AnchorPane>

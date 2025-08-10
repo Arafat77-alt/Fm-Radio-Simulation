@@ -99,4 +99,8 @@ public class TeamMeetingFxmlController
         meetingTimeTextField.clear();
         agendaTextArea.clear();
     }
+
+    @javafx.fxml.FXML
+    public void mainMenuOA(ActionEvent actionEvent) {
+    }
 }

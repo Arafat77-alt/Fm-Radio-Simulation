@@ -90,4 +90,8 @@ public class SocialMediaFxmlController
         showReportTextArea.setText(" Show: " + selected.getShowName() +
                 "\n\nReport:\n" + selected.getReport());
     }
+
+    @javafx.fxml.FXML
+    public void mainMenuOA(ActionEvent actionEvent) {
+    }
 }

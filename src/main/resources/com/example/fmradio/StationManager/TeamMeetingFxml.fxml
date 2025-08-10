@@ -9,8 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.StationManager.TeamMeetingFxmlController">
+<AnchorPane prefHeight="435.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.StationManager.TeamMeetingFxmlController">
    <children>
       <TextField fx:id="meetingTimeTextField" layoutX="108.0" layoutY="36.0" />
       <TextArea fx:id="agendaTextArea" layoutX="342.0" layoutY="15.0" prefHeight="91.0" prefWidth="243.0" />
@@ -27,5 +26,6 @@
       <Button layoutX="86.0" layoutY="341.0" mnemonicParsing="false" onAction="#sendInviteOA" text="Send Invite" />
       <Button layoutX="407.0" layoutY="144.0" mnemonicParsing="false" onAction="#confirmOA" text="Confirm" />
       <Label layoutX="314.0" layoutY="337.0" text="Message" />
+      <Button layoutX="219.0" layoutY="380.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Mainmenu" />
    </children>
 </AnchorPane>
