@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="498.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.StationManager.ReviewAdvertiserFxmlController">
    <children>
       <TableView fx:id="advertiserUsageTableView" layoutX="6.0" layoutY="263.0" prefHeight="200.0" prefWidth="683.0">
@@ -17,7 +16,7 @@
             <TableColumn fx:id="scheduleTimeCol" prefWidth="100.00001525878906" text="Scheduled Time" />
             <TableColumn fx:id="durationCol" prefWidth="68.6666259765625" text="Duration" />
             <TableColumn fx:id="numberOfPlaysCol" prefWidth="107.33331298828125" text="Number of plays" />
-            <TableColumn fx:id="costPerMInCol" prefWidth="81.33328247070312" text="Cost per Min" />
+            <TableColumn fx:id="costPerMinCol" prefWidth="81.33328247070312" text="Cost per Min" />
             <TableColumn fx:id="totalCostCol" prefWidth="120.0" text="Total cost" />
         </columns>
       </TableView>

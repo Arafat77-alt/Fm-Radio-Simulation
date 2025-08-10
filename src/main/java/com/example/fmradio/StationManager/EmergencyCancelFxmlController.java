@@ -116,4 +116,8 @@ public class EmergencyCancelFxmlController
         reciveAlertTextArea.setText(alertMsg);
         confirmationLabel.setText("Alert received. Please take action.");
     }
+
+    @javafx.fxml.FXML
+    public void mainMenuOA(ActionEvent actionEvent) {
+    }
 }

@@ -38,13 +38,12 @@ public class SongRequestController
 
     }
 
-   ArrayList<SongRequest> songRequestList = new ArrayList<>();
+    ArrayList<SongRequest> songRequestList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void submitSongRequestButtonOnAction(ActionEvent actionEvent) {
         String songTitle, artistName, shoutout;
         LocalDate requestdate;
-        String listenerId;
 
         songTitle = songTtitleTextfield.getText();
         artistName = artistNameTextField.getText();
@@ -53,8 +52,6 @@ public class SongRequestController
 
         SongRequest songRequest = new SongRequest(songTitle, artistName, shoutout, requestdate );
         songRequestList.add(songRequest);
-        songRequestTableView.getItems().addAll(songRequest);
-
-
+        songRequestTableView.getItems().add(songRequest);
     }
 }

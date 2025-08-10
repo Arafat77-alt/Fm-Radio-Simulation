@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-
 <AnchorPane prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.StationManager.StationManagerFxmlController">
    <children>
-      <Button layoutX="71.0" layoutY="68.0" mnemonicParsing="false" onAction="#weeklyProgramOA" text="Weekly Program Schedule" />
+      <Button layoutX="71.0" layoutY="68.0" mnemonicParsing="false" onAction="#weeklyProgramOA" text="Weekly Program " />
       <Button layoutX="71.0" layoutY="149.0" mnemonicParsing="false" onAction="#assignRjAndProducerOA" text="Assign Rj And Producer" />
       <Button layoutX="57.0" layoutY="324.0" mnemonicParsing="false" onAction="#emergencyShowCancellationOA" text="Emergency Show Cancellation" />
-      <Button layoutX="69.0" layoutY="242.0" mnemonicParsing="false" onAction="#teamMettingOA" text="Schedule Team Meeting" />
+      <Button layoutX="69.0" layoutY="242.0" mnemonicParsing="false" onAction="#teamMeetingOA" text=" Team Meeting" />
       <Button layoutX="410.0" layoutY="68.0" mnemonicParsing="false" onAction="#teamPerformanceOA" text="Team Performance" />
-      <Button layoutX="385.0" layoutY="149.0" mnemonicParsing="false" onAction="#reviewSocialMediaOA" text="Review Social Media Engagement" />
+      <Button layoutX="385.0" layoutY="149.0" mnemonicParsing="false" onAction="#socialMediaOA" text=" Social Media Engagement" />
       <Button layoutX="417.0" layoutY="242.0" mnemonicParsing="false" onAction="#approveFinalPlaylistOA" text="Approve Final Playlist" />
-      <Button layoutX="428.0" layoutY="336.0" mnemonicParsing="false" onAction="#reviewAdvertiserSlotOA" text="Review Advirtiser Slot" />
-      <Button layoutX="274.0" layoutY="434.0" mnemonicParsing="false" onAction="#singoutOA" text="Signout" />
+      <Button layoutX="428.0" layoutY="336.0" mnemonicParsing="false" onAction="#advertiserSlotOA" text=" Advertiser Slot" />
+      <Button layoutX="493.0" layoutY="453.0" mnemonicParsing="false" onAction="#singoutOA" text="Signout" />
       <Line endX="26.0" endY="245.0" layoutX="274.0" layoutY="115.0" startX="26.0" startY="-46.333335876464844" />
+      <Label fx:id="messageLabel" layoutX="113.0" layoutY="414.0" prefHeight="77.0" prefWidth="271.0" text="Label" />
+      <Label layoutX="55.0" layoutY="436.0" text="Message" />
    </children>
 </AnchorPane>

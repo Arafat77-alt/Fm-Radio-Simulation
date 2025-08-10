@@ -17,8 +17,8 @@
       </TableView>
       <Label layoutX="134.0" layoutY="149.0" text="Uploaded Songs" />
       <Label fx:id="messageLabel" layoutX="415.0" layoutY="289.0" prefHeight="107.0" prefWidth="190.0" text="Label" />
-      <Label layoutX="484.0" layoutY="272.0" text="Comment" />
-      <Button layoutX="56.0" layoutY="87.0" mnemonicParsing="false" onAction="#checkCopyrightOA" text="Check Copyright" />
+      <Label fx:id="confirmationLabel" layoutX="484.0" layoutY="272.0" text="Confirmation" />
+      <Button layoutX="56.0" layoutY="87.0" mnemonicParsing="false" onAction="#checkDuplicateOA" text="Check Duplicate" />
       <Button layoutX="240.0" layoutY="87.0" mnemonicParsing="false" onAction="#approveOA" text="Approve" />
       <Button layoutX="365.0" layoutY="87.0" mnemonicParsing="false" onAction="#rejectOA" text="Reject" />
       <Button layoutX="96.0" layoutY="415.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Main Menu" />

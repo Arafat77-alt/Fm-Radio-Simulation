@@ -86,4 +86,7 @@ public class TeamPerformanceFxmlController
         BinaryFileUtil.saveStationData(SharedData.stationData, "C:/intasgo.com/data/team_performance.dat");
     }
 
+    @javafx.fxml.FXML
+    public void mainMenuOA(ActionEvent actionEvent) {
+    }
 }
