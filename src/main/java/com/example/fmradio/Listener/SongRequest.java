@@ -1,29 +1,22 @@
 package com.example.fmradio.Listener;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 
 public class SongRequest {
-    private String listenerId;
     private String songTitle;
     private String artistName;
     private String shoutout;
-    private LocalDateTime dateTime;
+    private LocalDate requestdate;
 
-    public SongRequest(String listenerId, String songTitle, String artistName, String shoutout, LocalDateTime dateTime) {
-        this.listenerId = listenerId;
+
+    public SongRequest(String songTitle, String artistName, String shoutout, LocalDate requestdate) {
         this.songTitle = songTitle;
         this.artistName = artistName;
         this.shoutout = shoutout;
-        this.dateTime = dateTime;
+        this.requestdate = requestdate;
     }
 
-    public String getListenerId() {
-        return listenerId;
-    }
-
-    public void setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-    }
 
     public String getSongTitle() {
         return songTitle;
@@ -33,11 +26,11 @@ public class SongRequest {
         this.songTitle = songTitle;
     }
 
-    public String getArtist() {
+    public String getArtistName() {
         return artistName;
     }
 
-    public void setArtist(String artistName) {
+    public void setArtistName(String artistName) {
         this.artistName = artistName;
     }
 
@@ -49,37 +42,26 @@ public class SongRequest {
         this.shoutout = shoutout;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public LocalDate getRequestdate() {
+        return requestdate;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    public void setRequestdate(LocalDate requestdate) {
+        this.requestdate = requestdate;
     }
-
 
     @Override
     public String toString() {
         return "SongRequest{" +
-                "listenerId='" + listenerId + '\'' +
                 ", songTitle='" + songTitle + '\'' +
                 ", artistName='" + artistName + '\'' +
                 ", shoutout='" + shoutout + '\'' +
-                ", dateTime=" + dateTime +
+                ", requestdate=" + requestdate +
                 '}';
     }
 
-    private boolean validateSongRequest(String songTitle, String artistName, String shoutout) {
-            if (songTitle == null || songTitle.isEmpty()) {
-                return false;
-            }
-            if (artistName == null || artistName.isEmpty()) {
-                return false;
-            }
-            if (shoutout != null && shoutout.length() > 300) {
-                return false;
-            }
-            return true;
-        }
-    };
+
+
+
+};
 

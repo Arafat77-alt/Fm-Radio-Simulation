@@ -14,8 +14,6 @@ public class ListenerPollParticipationController
     @javafx.fxml.FXML
     private ComboBox selectOptionComboBox;
     @javafx.fxml.FXML
-    private TextField listenerIDTextfield;
-    @javafx.fxml.FXML
     private TableColumn selcetOptionColumn;
     @javafx.fxml.FXML
     private ComboBox pollTitleComboBox;
