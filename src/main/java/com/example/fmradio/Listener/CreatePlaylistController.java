@@ -71,8 +71,6 @@ public class CreatePlaylistController
         String fourthsong = fourthSongComBox.getValue();
         String fifthsong = fifthSongComboBox.getValue();
 
-
-
         int count = 0;
 
         if(firstsong != null){
@@ -85,11 +83,9 @@ public class CreatePlaylistController
         if (thirdsong != null) {
             count++;
         }
-
         if (fourthsong != null) {
             count++;
         }
-
         if (fifthsong != null) {
             count++;
         }
