@@ -4,11 +4,13 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.CreatePlaylistController">
+<AnchorPane prefHeight="455.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.CreatePlaylistController">
    <children>
       <TextField fx:id="playListNmaeTextField" layoutX="157.0" layoutY="50.0" />
       <Label layoutX="46.0" layoutY="54.0" text="Enter Playlist Name" />
@@ -21,7 +23,13 @@
       <ComboBox fx:id="fifthSongComboBox" layoutX="435.0" layoutY="220.0" prefWidth="150.0" promptText="Classical" />
       <Label layoutX="44.0" layoutY="98.0" text="Date of Created" />
       <DatePicker fx:id="createPlayListDatePicker" layoutX="144.0" layoutY="94.0" />
-      <Button layoutX="97.0" layoutY="182.0" mnemonicParsing="false" onAction="#savePlayListButton" prefHeight="36.0" prefWidth="102.0" text="Save Playlist" />
-      <Button fx:id="historyPlaylistFXID" layoutX="86.0" layoutY="278.0" mnemonicParsing="false" onAction="#historyPLayListButton" prefHeight="54.0" prefWidth="431.0" text="See your PlayList History" />
+      <Button layoutX="57.0" layoutY="183.0" mnemonicParsing="false" onAction="#savePlayListButton" prefHeight="36.0" prefWidth="102.0" text="Save Playlist" />
+      <TableView fx:id="playListTableview" layoutX="108.0" layoutY="262.0" prefHeight="178.0" prefWidth="326.0">
+         <columns>
+            <TableColumn fx:id="playListNameCol" prefWidth="92.800048828125" text="Playlist Name" />
+            <TableColumn fx:id="numberSongCol" prefWidth="116.0" text="Number of Songs" />
+            <TableColumn fx:id="dateCreateplaylistCol" prefWidth="116.0" text="Date Created" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

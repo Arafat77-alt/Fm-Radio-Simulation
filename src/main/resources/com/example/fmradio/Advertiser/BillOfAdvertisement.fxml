@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fmradio.Advertiser.BillOfAdvertisement"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.BillOfAdvertisementController">
+   <children>
+      <Label layoutX="61.0" layoutY="40.0" text="Ad title " />
+      <ComboBox fx:id="adTitleComboBox" layoutX="115.0" layoutY="36.0" prefWidth="150.0" />
+      <Label layoutX="61.0" layoutY="88.0" text="Duration" />
+      <Label layoutX="319.0" layoutY="40.0" text="No. of Slots" />
+      <TextField fx:id="noOfSlotsTextField" layoutX="390.0" layoutY="36.0" />
+      <ComboBox fx:id="timeCategoryComboBox" layoutX="397.0" layoutY="84.0" prefWidth="150.0" promptText="Prime / Regular" />
+      <Label layoutX="311.0" layoutY="88.0" text="Time Category" />
+      <Label fx:id="totalPerAdLabel" alignment="CENTER" layoutX="381.0" layoutY="155.0" prefHeight="47.0" prefWidth="175.0" text="Total per Ad" />
+      <Button layoutX="82.0" layoutY="273.0" mnemonicParsing="false" onAction="#generateBillButtonOnAction" text="Generate Bill" />
+      <Button fx:id="billHistoryFXID" layoutX="215.0" layoutY="273.0" mnemonicParsing="false" onAction="#billHistoryButtonOnAction" text="See the pdf of all the bills" />
+      <Button layoutX="77.0" layoutY="153.0" mnemonicParsing="false" onAction="#loadAdInfosForBillButtonOnAction" text="Load Ad infos" />
+      <ComboBox fx:id="durationComboBox" layoutX="115.0" layoutY="84.0" prefWidth="150.0" />
+   </children>
 </AnchorPane>

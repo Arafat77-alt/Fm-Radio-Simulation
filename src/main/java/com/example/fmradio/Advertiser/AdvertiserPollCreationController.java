@@ -1,9 +1,11 @@
 package com.example.fmradio.Advertiser;
 
+import com.example.fmradio.Utility.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -23,15 +25,24 @@ public class AdvertiserPollCreationController
     private TextField optionThreeTextField;
     @javafx.fxml.FXML
     private TableColumn<Poll, String> subjectColumn;
-
     @javafx.fxml.FXML
     private TableView<Poll> createPollTableView;
     @javafx.fxml.FXML
-    private TextField pollIDTextField;
-    @javafx.fxml.FXML
     private TextField pollSubjectTextField;
     @javafx.fxml.FXML
-    private TableColumn optionNoCol;
+    private TableColumn<Poll, Integer> optionNoCol;
+    @javafx.fxml.FXML
+    private TableColumn<Poll, String> optionThreeCol;
+    @javafx.fxml.FXML
+    private TableColumn<Poll, String> pollTtitleColoumn;
+    @javafx.fxml.FXML
+    private TableColumn<Poll, String> optionTwoColoumn;
+    @javafx.fxml.FXML
+    private TableColumn<Poll, String> questionColoumn;
+    @javafx.fxml.FXML
+    private TableColumn<Poll, String> optionOneColoumn;
+    @javafx.fxml.FXML
+    private TableView<Poll> advertiserPollTableview;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -40,15 +51,19 @@ public class AdvertiserPollCreationController
         optionNoCol.setCellValueFactory(new  PropertyValueFactory<>("optionNO"));
         subjectColumn.setCellValueFactory(new PropertyValueFactory<>("pollsubject"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("dateOfPollCreate"));
-    }
 
-    ArrayList<Poll> pollList = new ArrayList<>();
+        pollTtitleColoumn.setCellValueFactory(new  PropertyValueFactory<>("pollsubject"));
+        optionOneColoumn.setCellValueFactory(new  PropertyValueFactory<>("optionOne"));
+        optionTwoColoumn.setCellValueFactory(new PropertyValueFactory<>("optionTwo"));
+        optionThreeCol.setCellValueFactory(new PropertyValueFactory<>("optionThree"));
+        questionColoumn.setCellValueFactory(new PropertyValueFactory<>("question"));
+
+    }
 
     @javafx.fxml.FXML
     public void validatePollButtonOnAction(ActionEvent actionEvent) {
-        String pollId;
+
         String pollsubject;
-        pollId = pollIDTextField.getText();
         pollsubject = pollSubjectTextField.getText();
         LocalDate dateOfPollCreate;
         dateOfPollCreate = LocalDate.now();
@@ -64,14 +79,6 @@ public class AdvertiserPollCreationController
         optionTwo = optionTwoTextField.getText();
         optionThree= optionThreeTextField.getText();
 
-
-
-        if (pollId.isBlank() || pollsubject.isBlank() || question.isBlank() || dateOfPollCreate == null){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Please write down all the requirements before poll creation");
-            alert.show();
-            return;
-        };
 
         if (optionOne.isBlank()){
             if (optionTwo.isBlank() || optionThree.isBlank()) {
@@ -99,6 +106,15 @@ public class AdvertiserPollCreationController
                 return;
             }
         }
+
+        if (pollsubject.isBlank() || question.isBlank()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Invalid Data entries");
+            alert.setContentText("Please fill up title and question");
+            alert.showAndWait();
+
+        }
+
         showSuccessFailLabel.setText("Your poll is valid");
 
     }
@@ -108,7 +124,6 @@ public class AdvertiserPollCreationController
     public void createPollButtonOnAction(ActionEvent actionEvent) {
         String pollId;
         String pollsubject;
-        pollId = pollIDTextField.getText();
         pollsubject = pollSubjectTextField.getText();
         LocalDate dateOfPollCreate;
         dateOfPollCreate = LocalDate.now();
@@ -135,10 +150,36 @@ public class AdvertiserPollCreationController
             count++;
         }
 
-        ArrayList<Poll> pollCreationArrayList =  new ArrayList<>(); //Poll.pollList;
-        Poll newcreatedpoll = new Poll(pollId,pollsubject,question,optionOne, optionTwo, optionThree, dateOfPollCreate, count);
-        pollCreationArrayList.add(newcreatedpoll);
+        ArrayList<Poll> pollCreationArrayList =  new ArrayList<>();
+        Poll newcreatedpoll = new Poll(pollsubject,question,optionOne, optionTwo, optionThree, dateOfPollCreate, count);
 
+        pollCreationArrayList.add(newcreatedpoll);
         createPollTableView.getItems().addAll(pollCreationArrayList);
+        advertiserPollTableview.getItems().addAll(pollCreationArrayList);
+
+        saveFile(newcreatedpoll);
     }
+
+    private void saveFile(Object Poll){
+
+        ObjectOutputStream oos = null;
+
+        try {
+            File file = new File("createdpolls.bin");
+            if (file.exists()) {
+                FileOutputStream fos = new FileOutputStream(file, true);
+                oos = new AppendableObjectOutputStream(fos);
+            } else {
+                FileOutputStream fos = new FileOutputStream(file);
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(Poll);
+            oos.close();
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
 }

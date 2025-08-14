@@ -15,27 +15,25 @@
       <Label layoutX="58.0" layoutY="112.0" text="Duration (minutes)" />
       <Label layoutX="64.0" layoutY="154.0" text="Target Audience" />
       <Label layoutX="78.0" layoutY="207.0" text="Category" />
-      <TextField layoutX="175.0" layoutY="66.0" />
-      <TextField layoutX="175.0" layoutY="108.0" />
-      <ComboBox layoutX="174.0" layoutY="159.0" prefWidth="150.0" promptText="&quot;Teens&quot;, &quot;Adults&quot;, &quot;All&quot;" />
-      <ComboBox layoutX="160.0" layoutY="212.0" prefWidth="150.0" promptText="&quot;Retail&quot;, &quot;Event&quot;, &quot;Service&quot;" />
+      <TextField fx:id="adTittleTextField" layoutX="175.0" layoutY="66.0" />
+      <TextField fx:id="durationMinutesTextField" layoutX="175.0" layoutY="108.0" />
+      <ComboBox fx:id="targetAudienceComboBox" layoutX="174.0" layoutY="159.0" prefWidth="150.0" />
+      <ComboBox fx:id="categoryComboBox" layoutX="160.0" layoutY="212.0" prefWidth="150.0" />
       <Label layoutX="62.0" layoutY="257.0" text="Airing Date" />
-      <DatePicker layoutX="144.0" layoutY="253.0" />
+      <DatePicker fx:id="airingDateDatePicker" layoutX="144.0" layoutY="253.0" />
       <Label layoutX="62.0" layoutY="300.0" text="Time slot " />
-      <ComboBox layoutX="144.0" layoutY="296.0" prefWidth="150.0" />
-      <Label layoutX="547.0" layoutY="62.0" prefHeight="86.0" prefWidth="124.0" text="Succes/fail of sceduling" />
-      <Button layoutX="557.0" layoutY="187.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="Submit Request" />
-      <TableView layoutX="64.0" layoutY="367.0" prefHeight="200.0" prefWidth="707.0">
+      <ComboBox fx:id="timingSlotComboBox" layoutX="144.0" layoutY="296.0" prefWidth="150.0" />
+      <Label fx:id="datecheckLabel" layoutX="547.0" layoutY="62.0" prefHeight="86.0" prefWidth="124.0" text="Succes/fail of sceduling" />
+      <Button layoutX="557.0" layoutY="187.0" mnemonicParsing="false" onAction="#submitRequestButtonOnAction" prefHeight="42.0" prefWidth="100.0" text="Submit " />
+      <TableView fx:id="sceduleAdTableview" layoutX="64.0" layoutY="353.0" prefHeight="200.0" prefWidth="707.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Ad title " />
-          <TableColumn prefWidth="126.4000244140625" text="Duration (minutes)" />
-            <TableColumn prefWidth="126.4000244140625" text="Target Audience" />
-            <TableColumn prefWidth="126.4000244140625" text="Category" />
-            <TableColumn prefWidth="126.4000244140625" text="Airing Date" />
-            <TableColumn prefWidth="126.4000244140625" text="Time slot " />
+          <TableColumn fx:id="adTitleColoumn" prefWidth="75.0" text="Ad title " />
+          <TableColumn fx:id="durationMinutesColoumn" prefWidth="126.4000244140625" text="Duration (minutes)" />
+            <TableColumn fx:id="targetAudienceColoumn" prefWidth="126.4000244140625" text="Target Audience" />
+            <TableColumn fx:id="categoryColoumn" prefWidth="126.4000244140625" text="Category" />
+            <TableColumn fx:id="airingDateColoumn" prefWidth="126.4000244140625" text="Airing Date" />
+            <TableColumn fx:id="timeSlotColoumn" prefWidth="126.4000244140625" text="Time slot " />
         </columns>
       </TableView>
-      <Label layoutX="88.0" layoutY="26.0" text="Advertiser ID:" />
-      <TextField layoutX="174.0" layoutY="22.0" />
    </children>
 </AnchorPane>

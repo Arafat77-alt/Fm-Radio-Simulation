@@ -1,12 +1,10 @@
 package com.example.fmradio.Advertiser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class Poll {
-    private String pollId;
+public class Poll implements Serializable {
     private String pollsubject;
-
     private String question;
     private String optionOne;
     private String optionTwo;
@@ -17,8 +15,7 @@ public class Poll {
 
 
 
-    public Poll(String pollId, String pollsubject, String question, String optionOne, String optionTwo, String optionThree, LocalDate dateOfPollCreate, int optionNO) {
-        this.pollId = pollId;
+    public Poll(String pollsubject, String question, String optionOne, String optionTwo, String optionThree, LocalDate dateOfPollCreate, int optionNO) {
         this.pollsubject = pollsubject;
 
         this.question = question;
@@ -35,14 +32,6 @@ public class Poll {
 
     public void setOptionNO(int optionNO) {
         this.optionNO = optionNO;
-    }
-
-    public String getPollId() {
-        return pollId;
-    }
-
-    public void setPollId(String pollId) {
-        this.pollId = pollId;
     }
 
     public String getPollsubject() {
@@ -97,7 +86,6 @@ public class Poll {
     @Override
     public String toString() {
         return "Poll{" +
-                "pollId='" + pollId + '\'' +
                 ", pollsubject='" + pollsubject + '\'' +
                 ", question='" + question + '\'' +
                 ", optionOne='" + optionOne + '\'' +
@@ -107,4 +95,6 @@ public class Poll {
                 ", optionNO=" + optionNO +
                 '}';
     }
+
+
 }

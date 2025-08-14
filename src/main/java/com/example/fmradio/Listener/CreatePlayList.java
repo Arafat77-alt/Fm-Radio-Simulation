@@ -2,9 +2,10 @@ package com.example.fmradio.Listener;
 
 import javafx.scene.control.Alert;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class CreatePlayList {
+public class CreatePlayList implements Serializable {
     private String playlistName;
     private int noOfSongs;
     private LocalDate dateofcreateplayList;
@@ -47,5 +48,6 @@ public class CreatePlayList {
                 ", dateofcreateplayList=" + dateofcreateplayList +
                 '}';
     }
+
 
 }

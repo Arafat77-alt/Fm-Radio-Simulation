@@ -1,26 +1,18 @@
 package com.example.fmradio.Advertiser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class SponsoredPlaylist {
-
-    private String advertiserId;
+public class SponsoredPlaylist implements Serializable {
     private String playlistName;
     private LocalDate sponsorshipDate;
 
-    public SponsoredPlaylist(String advertiserId, String playlistName, LocalDate sponsorshipDate) {
-        this.advertiserId = advertiserId;
+    public SponsoredPlaylist( String playlistName, LocalDate sponsorshipDate) {
         this.playlistName = playlistName;
         this.sponsorshipDate = sponsorshipDate;
     }
 
-    public String getAdvertiserId() {
-        return advertiserId;
-    }
 
-    public void setAdvertiserId(String advertiserId) {
-        this.advertiserId = advertiserId;
-    }
 
     public String getPlaylistName() {
         return playlistName;
@@ -41,7 +33,6 @@ public class SponsoredPlaylist {
     @Override
     public String toString() {
         return "SponsoredPlaylist{" +
-                "advertiserId='" + advertiserId + '\'' +
                 ", playlistName='" + playlistName + '\'' +
                 ", sponsorshipDate=" + sponsorshipDate +
                 '}';

@@ -1,40 +1,24 @@
 package com.example.fmradio.Advertiser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Advertisement {
-    private String adId;
-    private String advertiserId;
+public class Advertisement implements Serializable {
     private String title;
     private int duration;
     private String category;
     private LocalDate date;
     private String timeSlot;
+    private String targetAudience;
 
-    public Advertisement(String adId, String advertiserId, String title, int duration, String category, LocalDate date, String timeSlot) {
-        this.adId = adId;
-        this.advertiserId = advertiserId;
+    public Advertisement( String title, int duration, String category, LocalDate date, String timeSlot, String targetAudience) {
+
         this.title = title;
         this.duration = duration;
         this.category = category;
         this.date = date;
         this.timeSlot = timeSlot;
-    }
-
-    public String getAdId() {
-        return adId;
-    }
-
-    public void setAdId(String adId) {
-        this.adId = adId;
-    }
-
-    public String getAdvertiserId() {
-        return advertiserId;
-    }
-
-    public void setAdvertiserId(String advertiserId) {
-        this.advertiserId = advertiserId;
+        this.targetAudience = targetAudience;
     }
 
     public String getTitle() {
@@ -77,16 +61,24 @@ public class Advertisement {
         this.timeSlot = timeSlot;
     }
 
+    public String getTargetAudience() {
+        return targetAudience;
+    }
+
+    public void setTargetAudience(String targetAudience) {
+        this.targetAudience = targetAudience;
+    }
+
     @Override
     public String toString() {
         return "Advertisement{" +
-                "adId='" + adId + '\'' +
-                ", advertiserId='" + advertiserId + '\'' +
                 ", title='" + title + '\'' +
                 ", duration=" + duration +
                 ", category='" + category + '\'' +
                 ", date=" + date +
                 ", timeSlot='" + timeSlot + '\'' +
+                ", targetAudience='" + targetAudience + '\'' +
                 '}';
     }
 }
+

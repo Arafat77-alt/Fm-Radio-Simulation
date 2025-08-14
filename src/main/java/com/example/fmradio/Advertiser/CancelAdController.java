@@ -2,31 +2,21 @@ package com.example.fmradio.Advertiser;
 
 import com.example.fmradio.Utility.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
+
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import javax.imageio.IIOException;
 import java.io.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 
-public class ScheduleAdvertisementController
-{
-
-    @javafx.fxml.FXML
-    private ComboBox<String> targetAudienceComboBox;
-    @javafx.fxml.FXML
-    private ComboBox<String> categoryComboBox;
+public class CancelAdController {
     @javafx.fxml.FXML
     private TableView<Advertisement> sceduleAdTableview;
-    @javafx.fxml.FXML
-    private TextField durationMinutesTextField;
-    @javafx.fxml.FXML
-    private TextField adTittleTextField;
-    @javafx.fxml.FXML
-    private ComboBox<String> timingSlotComboBox;
-    @javafx.fxml.FXML
-    private DatePicker airingDateDatePicker;
     @javafx.fxml.FXML
     private TableColumn<Advertisement, LocalDate> airingDateColoumn;
     @javafx.fxml.FXML
@@ -34,58 +24,73 @@ public class ScheduleAdvertisementController
     @javafx.fxml.FXML
     private TableColumn<Advertisement, String> categoryColoumn;
     @javafx.fxml.FXML
-    private TableColumn<Advertisement, String> adTitleColoumn;
-    @javafx.fxml.FXML
     private TableColumn<Advertisement, String> timeSlotColoumn;
+    @javafx.fxml.FXML
+    private ComboBox<String> adTtileComboBox;
     @javafx.fxml.FXML
     private TableColumn<Advertisement, Integer> durationMinutesColoumn;
     @javafx.fxml.FXML
-    private Label datecheckLabel;
+    private TableColumn<Advertisement, String> adTitleColoumn;
+
 
     @javafx.fxml.FXML
     public void initialize() {
-
-        categoryComboBox.getItems().addAll("Retail", "Event", "Service");
-        targetAudienceComboBox.getItems().addAll("Teens", "Adults", "All");
-        timingSlotComboBox.getItems().addAll("Moring", "Evening", "Night");
-
         adTitleColoumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         airingDateColoumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         categoryColoumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         durationMinutesColoumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
         targetAudienceColoumn.setCellValueFactory(new PropertyValueFactory<>("targetAudience"));
         timeSlotColoumn.setCellValueFactory(new PropertyValueFactory<>("timeSlot"));
+
     }
 
+    ArrayList<Advertisement> adsArray = new ArrayList<>();
 
-    @FXML
-    public void submitRequestButtonOnAction(ActionEvent actionEvent) {
-        String title;
-        int duration;
-        String category;
-        LocalDate date;
-        String timeSlot;
-        String targetAudience;
 
-        title = adTittleTextField.getText();
-        duration = Integer.parseInt(durationMinutesTextField.getText());
-        category = categoryComboBox.getValue();
-        date = airingDateDatePicker.getValue();
-        timeSlot = timingSlotComboBox.getValue();
-        targetAudience = targetAudienceComboBox.getValue();
-
-        LocalDate a = LocalDate.now();
-
-        if (date.equals(a) || date.isBefore(a) ){
-            datecheckLabel.setText("Set a Future Date");
-            return;
+    @javafx.fxml.FXML
+    public void cancelButtonOnAction(ActionEvent actionEvent) {
+        String adtitle = adTtileComboBox.getValue();
+        File f = new File("Advertisements.bin");
+        if (f.exists()){
+            f.delete();
         }
+        for (Advertisement a : adsArray) {
+            if (adtitle.equals(a.getTitle())) {
+                sceduleAdTableview.getItems().remove(a);
+                adTtileComboBox.getItems().remove(a);
+                continue;
+            }
+            saveAds(a);
+        }
+    }
 
-        Advertisement ads = new Advertisement(title, duration, category, date, timeSlot, targetAudience);
-        sceduleAdTableview.getItems().addAll(ads);
-        datecheckLabel.setText("Successful");
-        saveAds(ads);
+    @javafx.fxml.FXML
+    public void loadAdButtonOnAction(ActionEvent actionEvent) {
+        FileInputStream fisforobject = null;
+        ObjectInputStream ois = null;
+        sceduleAdTableview.getItems().clear();
+        adTtileComboBox.getItems().clear();
+        adsArray.clear();
+        try {
+            fisforobject = new FileInputStream("Advertisements.bin");
+            ois = new ObjectInputStream(fisforobject);
+            while (true) {
+                Advertisement adsReading = (Advertisement) ois.readObject();
+                adTtileComboBox.getItems().addAll(adsReading.getTitle());
+                adsArray.add(adsReading);
+                sceduleAdTableview.getItems().add(adsReading);
+            }
+        } catch (Exception e) {
+            try {
 
+                if (ois != null) {
+                    ois.close();
+                }
+            } catch (Exception e2) {
+
+            }
+
+        }
     }
 
     public void saveAds(Object Advertisement){
@@ -107,3 +112,5 @@ public class ScheduleAdvertisementController
         }
     }
 }
+
+

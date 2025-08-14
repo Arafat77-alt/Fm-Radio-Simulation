@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="486.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.CancelAdController">
+   <children>
+      <TableView fx:id="sceduleAdTableview" layoutX="25.0" layoutY="221.0" prefHeight="250.0" prefWidth="737.0">
+         <columns>
+            <TableColumn fx:id="adTitleColoumn" prefWidth="75.0" text="Ad title " />
+            <TableColumn fx:id="durationMinutesColoumn" prefWidth="126.4000244140625" text="Duration (minutes)" />
+            <TableColumn fx:id="targetAudienceColoumn" prefWidth="126.4000244140625" text="Target Audience" />
+            <TableColumn fx:id="categoryColoumn" prefWidth="126.4000244140625" text="Category" />
+            <TableColumn fx:id="airingDateColoumn" prefWidth="126.4000244140625" text="Airing Date" />
+            <TableColumn fx:id="timeSlotColoumn" prefWidth="126.4000244140625" text="Time slot " />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="adTtileComboBox" layoutX="114.0" layoutY="41.0" prefWidth="150.0" />
+      <Label layoutX="53.0" layoutY="45.0" text="Adt titles" />
+      <Button layoutX="479.0" layoutY="104.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="74.0" prefWidth="51.0" text="Cancel" />
+      <Button layoutX="299.0" layoutY="107.0" mnemonicParsing="false" onAction="#loadAdButtonOnAction" prefHeight="68.0" prefWidth="73.0" text="Load" />
+   </children>
+</AnchorPane>

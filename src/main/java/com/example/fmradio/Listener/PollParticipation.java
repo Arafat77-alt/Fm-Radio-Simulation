@@ -1,17 +1,18 @@
 package com.example.fmradio.Listener;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class PollParticipation {
+public class PollParticipation implements Serializable {
     private String pollTitle;
     private String selectedOption;
-    private LocalDateTime dateTime;
 
-    public PollParticipation(String listenerId, String pollTitle, String selectedOption, LocalDateTime dateTime) {
+
+    public PollParticipation( String pollTitle, String selectedOption) {
 
         this.pollTitle = pollTitle;
         this.selectedOption = selectedOption;
-        this.dateTime = dateTime;
+
     }
 
 
@@ -31,20 +32,14 @@ public class PollParticipation {
         this.selectedOption = selectedOption;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
-    }
 
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
-    }
 
     @Override
     public String toString() {
         return "PollParticipation{" +
                 ", pollTitle='" + pollTitle + '\'' +
                 ", selectedOption='" + selectedOption + '\'' +
-                ", dateTime=" + dateTime +
                 '}';
     }
+
 }
