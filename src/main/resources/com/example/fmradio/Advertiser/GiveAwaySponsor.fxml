@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.GiveAwaySponsorController">
+   <children>
+      <Label layoutX="45.0" layoutY="37.0" text="Giveaway Title:" />
+      <TextField fx:id="giveAwaytitleTextField" layoutX="131.0" layoutY="33.0" />
+      <TextField fx:id="prizeTextField" layoutX="114.0" layoutY="83.0" />
+      <Label layoutX="71.0" layoutY="87.0" text="Prize" />
+      <Label layoutX="54.0" layoutY="134.0" text="Expiry Date" />
+      <DatePicker fx:id="datePicker" layoutX="119.0" layoutY="130.0" />
+      <TextArea fx:id="conditionTextArea" layoutX="370.0" layoutY="43.0" prefHeight="98.0" prefWidth="200.0" />
+      <Label layoutX="390.0" layoutY="14.0" text="Entry Conditions for Giveaway" />
+      <TableView fx:id="giveAwayTableView" layoutX="54.0" layoutY="217.0" prefHeight="200.0" prefWidth="507.0">
+        <columns>
+          <TableColumn fx:id="titleColoumn" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="prizeColoumn" prefWidth="117.60003662109375" text="Prize" />
+            <TableColumn fx:id="expiryDateDatePickerCol" prefWidth="94.39996337890625" text="Date" />
+            <TableColumn fx:id="conditionColoumn" prefWidth="219.199951171875" text="Entry Conditions" />
+        </columns>
+      </TableView>
+      <Button layoutX="409.0" layoutY="170.0" mnemonicParsing="false" onAction="#submitGiveAwayButtonOnAction" text="Submit" />
+   </children>
+</AnchorPane>

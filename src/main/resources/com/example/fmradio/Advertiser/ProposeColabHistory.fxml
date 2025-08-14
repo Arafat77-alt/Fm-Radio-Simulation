@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.ProposeColabHistoryController">
+   <children>
+      <TableView fx:id="promotedShowTableview" layoutX="174.0" layoutY="78.0" prefHeight="200.0" prefWidth="229.0">
+        <columns>
+          <TableColumn fx:id="showNameCol" prefWidth="75.0" text="Show Name" />
+          <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="statusCol" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="backFXID" layoutX="48.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+   </children>
+</AnchorPane>

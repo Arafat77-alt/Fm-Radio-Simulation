@@ -58,7 +58,7 @@ public class ReportShowController
             feebackLabel.setText("You can give more details in the addtional comment section");
         }
         else {
-            feebackLabel.setText("Thank you for your kind words");
+            feebackLabel.setText("Thank you for your feedback");
         }
 
 
