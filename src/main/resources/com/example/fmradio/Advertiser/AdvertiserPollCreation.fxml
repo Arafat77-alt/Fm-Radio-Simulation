@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="702.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.AdvertiserPollCreationController">
+<AnchorPane prefHeight="663.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.AdvertiserPollCreationController">
    <children>
       <TextField fx:id="pollQuestionTextField" layoutX="129.0" layoutY="51.0" />
       <Label layoutX="47.0" layoutY="55.0" text="Poll Question" />
@@ -29,7 +29,7 @@
       <Label layoutX="435.0" layoutY="55.0" text="Poll Title" />
       <Button layoutX="449.0" layoutY="294.0" mnemonicParsing="false" onAction="#validatePollButtonOnAction" prefHeight="44.0" prefWidth="86.0" text="Validate Poll " />
       <Label fx:id="showSuccessFailLabel" layoutX="476.0" layoutY="124.0" prefHeight="75.0" prefWidth="142.0" text="Succes/Fail of poll creation" />
-      <TableView fx:id="advertiserPollTableview" layoutX="40.0" layoutY="466.0" prefHeight="200.0" prefWidth="700.0">
+      <TableView fx:id="advertiserPollTableview" layoutX="40.0" layoutY="443.0" prefHeight="200.0" prefWidth="700.0">
          <columns>
             <TableColumn fx:id="pollTtitleColoumn" prefWidth="102.4000244140625" text="Poll title " />
             <TableColumn fx:id="questionColoumn" prefWidth="220.79998779296875" text="Question" />

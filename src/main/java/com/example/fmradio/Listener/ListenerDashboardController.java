@@ -68,12 +68,17 @@ public class ListenerDashboardController
 
     @javafx.fxml.FXML
     public void songRequestButton(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("SongRequest.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("New scene");
-        stage.setScene(scene);
-        stage.show();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SongRequest.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) songRequestFXID.getScene().getWindow();
+
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
     }
 
     @javafx.fxml.FXML
