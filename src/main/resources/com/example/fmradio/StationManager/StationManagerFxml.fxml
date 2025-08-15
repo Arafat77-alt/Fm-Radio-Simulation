@@ -14,7 +14,7 @@
       <Button layoutX="385.0" layoutY="149.0" mnemonicParsing="false" onAction="#socialMediaEngagementOA" text=" Social Media Engagement" />
       <Button layoutX="417.0" layoutY="242.0" mnemonicParsing="false" onAction="#approveFinalPlaylistOA" text="Approve Final Playlist" />
       <Button layoutX="428.0" layoutY="336.0" mnemonicParsing="false" onAction="#advertiserSlotOA" text=" Advertiser Slot" />
-      <Button layoutX="493.0" layoutY="453.0" mnemonicParsing="false" onAction="#singoutOA" text="Signout" />
+      <Button layoutX="493.0" layoutY="453.0" mnemonicParsing="false" onAction="#signoutOA" text="Signout" />
       <Line endX="26.0" endY="245.0" layoutX="274.0" layoutY="115.0" startX="26.0" startY="-46.333335876464844" />
    </children>
 </AnchorPane>

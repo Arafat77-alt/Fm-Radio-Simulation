@@ -1,10 +1,16 @@
 package com.example.fmradio;
 
+import com.example.fmradio.Producer.ProducerFxmlController;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LogInController
 {
@@ -12,6 +18,10 @@ public class LogInController
     private Button listenerButtonFXML;
     @javafx.fxml.FXML
     private Button advertiserFXID;
+    @FXML
+    private Button producerBtn;
+    @FXML
+    private Button stationManagerBtn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -46,4 +56,37 @@ public class LogInController
         }
     }
 
+
+
+
+
+    @FXML
+    public void producerOA(ActionEvent  event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fmradio/Producer/ProducerFxml.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @FXML
+    public void stationManagerOA(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fmradio/StationManager/StationManagerFxml.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

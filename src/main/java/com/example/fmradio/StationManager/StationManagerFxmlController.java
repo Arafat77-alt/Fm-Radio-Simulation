@@ -11,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
+import java.io.IOException;
+
 public class StationManagerFxmlController {
 
     @FXML
@@ -53,9 +55,21 @@ public class StationManagerFxmlController {
     }
 
     @FXML
-    public void singoutOA(ActionEvent actionEvent) {
+    private void signoutOA(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fmradio/Login.fxml"));
+            Parent root = loader.load();
 
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
     @FXML
     public void advertiserSlotOA(ActionEvent actionEvent) {
