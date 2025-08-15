@@ -21,6 +21,16 @@ public class AdvertiserDashboardController
     private Button sponsorPLaylistFXID;
     @javafx.fxml.FXML
     private Button uploadAdvertisemenFXML;
+    @javafx.fxml.FXML
+    private Button proposeColabFXID;
+    @javafx.fxml.FXML
+    private Button asDiscountFXID;
+    @javafx.fxml.FXML
+    private Button giveAwayFXID;
+    @javafx.fxml.FXML
+    private Button cancelAdFXID;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -36,12 +46,8 @@ public class AdvertiserDashboardController
             dupstage.setTitle(" Advertisement Scheduling");
             dupstage.setScene(scene);
             dupstage.show();
-
         } catch (Exception e) {
-
         }
-
-
     }
 
     @javafx.fxml.FXML
@@ -96,6 +102,81 @@ public class AdvertiserDashboardController
     }
 
     @javafx.fxml.FXML
-    public void genetrateListenerReportOnAction(ActionEvent actionEvent) {
+    public void adDiscountButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("DiscountCodeGive.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) asDiscountFXID.getScene().getWindow();
+            dupstage.setTitle("Discount Code");
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void giveAwayButtonONAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("GiveAwaySponsor.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) giveAwayFXID.getScene().getWindow();
+            dupstage.setTitle("GiveAway");
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+
+
+    }
+
+    @javafx.fxml.FXML
+    public void proposeColabShowFXID(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ProposeColabShow.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) proposeColabFXID.getScene().getWindow();
+            dupstage.setTitle("colab");
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void cancelAdButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CancelAd.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) cancelAdFXID.getScene().getWindow();
+            dupstage.setTitle("Cancel Ads");
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LogIn.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
     }
 }

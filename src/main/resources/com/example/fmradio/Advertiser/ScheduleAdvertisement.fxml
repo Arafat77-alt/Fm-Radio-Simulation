@@ -35,5 +35,6 @@
             <TableColumn fx:id="timeSlotColoumn" prefWidth="126.4000244140625" text="Time slot " />
         </columns>
       </TableView>
+      <Button fx:id="backFXID" layoutX="26.0" layoutY="21.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

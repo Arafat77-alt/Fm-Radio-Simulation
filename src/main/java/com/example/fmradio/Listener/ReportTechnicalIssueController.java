@@ -1,9 +1,13 @@
 package com.example.fmradio.Listener;
 
+import com.example.fmradio.HelloApplication;
 import com.example.fmradio.Utility.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -29,6 +33,8 @@ public class ReportTechnicalIssueController
     private TableColumn<ReportTechnicalIssue, String> issueTypeColoumn;
     @javafx.fxml.FXML
     private TableColumn<ReportTechnicalIssue, LocalDate> issueDateColoumn;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -90,5 +96,20 @@ public class ReportTechnicalIssueController
         }
 
 
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ListenerDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("Listener DashBoard");
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
     }
 }

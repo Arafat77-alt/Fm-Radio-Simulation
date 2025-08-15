@@ -17,5 +17,6 @@
       <ComboBox fx:id="ratingComboBox" layoutX="107.0" layoutY="92.0" prefWidth="150.0" />
       <TextArea fx:id="commentTextArea" layoutX="371.0" layoutY="64.0" prefHeight="200.0" prefWidth="200.0" />
       <Button fx:id="ratingHistoryInAnotherWindowFXID" layoutX="62.0" layoutY="308.0" mnemonicParsing="false" onAction="#ratingHistoryAnotherWindowButton" prefHeight="34.0" prefWidth="502.0" text="Rating History In Another Window" />
+      <Button fx:id="backFXID" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

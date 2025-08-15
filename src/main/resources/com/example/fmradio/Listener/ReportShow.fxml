@@ -11,10 +11,10 @@
 
 <AnchorPane prefHeight="425.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.ReportShowController">
    <children>
-      <ComboBox fx:id="reasonForReportComboBox" layoutX="131.0" layoutY="38.0" prefWidth="150.0" />
-      <Label layoutX="53.0" layoutY="42.0" text="Select reason" />
-      <Label layoutX="62.0" layoutY="85.0" text="Show title" />
-      <TextField fx:id="showTitleTextField" layoutX="131.0" layoutY="81.0" />
+      <ComboBox fx:id="reasonForReportComboBox" layoutX="130.0" layoutY="63.0" prefWidth="150.0" />
+      <Label layoutX="53.0" layoutY="67.0" text="Select reason" />
+      <Label layoutX="62.0" layoutY="107.0" text="Show title" />
+      <TextField fx:id="showTitleTextField" layoutX="131.0" layoutY="103.0" />
       <Button layoutX="318.0" layoutY="137.0" mnemonicParsing="false" onAction="#submitReportButtonONaction" prefHeight="50.0" prefWidth="80.0" text="Submit" />
       <TableView fx:id="listenerReportTableView" layoutX="32.0" layoutY="214.0" prefHeight="200.0" prefWidth="387.0">
         <columns>
@@ -26,5 +26,6 @@
       <TextArea fx:id="additionaleCommentTextArea" layoutX="466.0" layoutY="211.0" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="510.0" layoutY="179.0" text="Additional Comment" />
       <Label fx:id="feebackLabel" alignment="CENTER" layoutX="430.0" layoutY="34.0" prefHeight="58.0" prefWidth="233.0" text="Feedback for your addtional Comment" />
+      <Button fx:id="backFXID" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

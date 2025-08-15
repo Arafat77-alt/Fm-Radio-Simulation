@@ -1,12 +1,17 @@
 package com.example.fmradio.Advertiser;
 
+import com.example.fmradio.HelloApplication;
 import com.example.fmradio.Listener.CreatePlayList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
@@ -22,6 +27,8 @@ public class SponsorPlaylistController {
     private TableColumn<SponsoredPlaylist, String> playListNamesCol;
     @javafx.fxml.FXML
     private TableView<SponsoredPlaylist> sponsorTableView;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
 
     @javafx.fxml.FXML
@@ -63,6 +70,21 @@ public class SponsorPlaylistController {
                 CreatePlayList createPlayListReading = (CreatePlayList) ois.readObject();
                 playlistLoadedNamesComboBox.getItems().addAll(createPlayListReading.getPlaylistName());
             }
+        } catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AdvertiserDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("AdvertiserDashBoard");
+            dupstage.show();
+
         } catch (Exception e) {
 
         }

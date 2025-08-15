@@ -12,12 +12,8 @@ public class Poll implements Serializable {
     private LocalDate dateOfPollCreate;
     private int optionNO;
 
-
-
-
     public Poll(String pollsubject, String question, String optionOne, String optionTwo, String optionThree, LocalDate dateOfPollCreate, int optionNO) {
         this.pollsubject = pollsubject;
-
         this.question = question;
         this.optionOne = optionOne;
         this.optionTwo = optionTwo;

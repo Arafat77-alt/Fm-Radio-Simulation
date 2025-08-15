@@ -1,9 +1,13 @@
 package com.example.fmradio.Advertiser;
 
+import com.example.fmradio.HelloApplication;
 import com.example.fmradio.Utility.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -43,6 +47,8 @@ public class AdvertiserPollCreationController
     private TableColumn<Poll, String> optionOneColoumn;
     @javafx.fxml.FXML
     private TableView<Poll> advertiserPollTableview;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -182,4 +188,20 @@ public class AdvertiserPollCreationController
 
     }
 
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AdvertiserDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("AdvertiserDashBoard");
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+
+    }
 }

@@ -1,14 +1,15 @@
 package com.example.fmradio.Listener;
 
 import com.example.fmradio.Advertiser.Poll;
+import com.example.fmradio.HelloApplication;
 import javafx.event.ActionEvent;
 
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 
 import java.io.FileInputStream;
@@ -41,6 +42,8 @@ public class ListenerPollParticipationController
     private ComboBox<String> pollTitleNoComboBox;
     @javafx.fxml.FXML
     private Label feedBackLabel;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -95,6 +98,22 @@ public class ListenerPollParticipationController
             }
 
         } catch (Exception e ) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ListenerDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("Listener DashBoard");
+            dupstage.show();
+
+        } catch (Exception e) {
 
         }
     }

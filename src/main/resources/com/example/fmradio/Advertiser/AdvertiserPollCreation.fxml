@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="680.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.AdvertiserPollCreationController">
+<AnchorPane prefHeight="702.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.AdvertiserPollCreationController">
    <children>
       <TextField fx:id="pollQuestionTextField" layoutX="129.0" layoutY="51.0" />
       <Label layoutX="47.0" layoutY="55.0" text="Poll Question" />
@@ -38,5 +38,6 @@
             <TableColumn fx:id="optionThreeCol" prefWidth="125.5999755859375" text="Option 3" />
          </columns>
       </TableView>
+      <Button fx:id="backFXID" layoutX="16.0" layoutY="7.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="44.0" prefWidth="61.0" text="Back" />
    </children>
 </AnchorPane>

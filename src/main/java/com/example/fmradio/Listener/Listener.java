@@ -1,9 +1,10 @@
 package com.example.fmradio.Listener;
 
 public class Listener {
-    private String listenerID;
+    private final String listenerID;
     private String region;
     private String gender;
+
 
     public Listener(String listenerID, String region, String gender) {
         this.listenerID = listenerID;
@@ -13,10 +14,6 @@ public class Listener {
 
     public String getListenerID() {
         return listenerID;
-    }
-
-    public void setListenerID(String listenerID) {
-        this.listenerID = listenerID;
     }
 
     public String getRegion() {
@@ -35,9 +32,6 @@ public class Listener {
         this.gender = gender;
     }
 
-    public void submitSongRequest(String songTitle, String artist, String shoutout){
-
-    };
 
     @Override
     public String toString() {

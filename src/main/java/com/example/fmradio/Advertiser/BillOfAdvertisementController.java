@@ -28,6 +28,8 @@ public class BillOfAdvertisementController
     private ComboBox<Integer> durationComboBox;
     @javafx.fxml.FXML
     private Button billHistoryFXID;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -103,5 +105,21 @@ public class BillOfAdvertisementController
         }
 
 
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AdvertiserDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("AdvertiserDashBoard");
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
     }
 }

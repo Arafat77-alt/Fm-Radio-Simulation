@@ -29,5 +29,6 @@
       </TableView>
       <TextField fx:id="showTtileTextField" layoutX="139.0" layoutY="55.0" />
       <Label fx:id="checkDuplicateLabel" layoutX="403.0" layoutY="39.0" prefHeight="82.0" prefWidth="150.0" text="Check Duplicates Title" />
+      <Button fx:id="backFXID" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

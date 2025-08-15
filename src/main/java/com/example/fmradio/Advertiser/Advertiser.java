@@ -2,7 +2,7 @@ package com.example.fmradio.Advertiser;
 
 public class Advertiser {
 
-    private String advertiserId;
+    private final String advertiserId;
     private String name;
     private String companyName;
 
@@ -14,10 +14,6 @@ public class Advertiser {
 
     public String getAdvertiserId() {
         return advertiserId;
-    }
-
-    public void setAdvertiserId(String advertiserId) {
-        this.advertiserId = advertiserId;
     }
 
     public String getName() {

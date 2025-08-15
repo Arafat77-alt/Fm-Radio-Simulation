@@ -9,14 +9,15 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.ProposeColabShowController">
    <children>
-      <TextField fx:id="showNameTitle" layoutX="128.0" layoutY="28.0" />
-      <Label layoutX="48.0" layoutY="32.0" text="Show Name" />
-      <DatePicker fx:id="proposedateDatePicker" layoutX="128.0" layoutY="76.0" />
-      <Label layoutX="40.0" layoutY="80.0" text="Proposed Date" />
+      <TextField fx:id="showNameTitle" layoutX="128.0" layoutY="65.0" />
+      <Label layoutX="48.0" layoutY="69.0" text="Show Name" />
+      <DatePicker fx:id="proposedateDatePicker" layoutX="128.0" layoutY="106.0" />
+      <Label layoutX="40.0" layoutY="110.0" text="Proposed Date" />
       <TextArea fx:id="conceptSummaryTextArea" layoutX="378.0" layoutY="50.0" prefHeight="95.0" prefWidth="200.0" />
       <Label layoutX="429.0" layoutY="23.0" text="Concept Summary" />
       <Button layoutX="48.0" layoutY="187.0" mnemonicParsing="false" onAction="#submitButtonONAction" prefHeight="26.0" prefWidth="77.0" text="Submit" />
       <Button fx:id="promoHistoryFXID" layoutX="57.0" layoutY="250.0" mnemonicParsing="false" onAction="#seePromoReportButtonOnAction" text="see the Promoted show list" />
       <Label fx:id="succesFailLabel" layoutX="283.0" layoutY="185.0" prefHeight="78.0" prefWidth="190.0" text="Succes/Fail" />
+      <Button fx:id="backFXID" layoutX="40.0" layoutY="19.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

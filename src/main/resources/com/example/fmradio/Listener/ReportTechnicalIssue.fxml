@@ -11,12 +11,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Listener.ReportTechnicalIssueController">
    <children>
-      <ComboBox fx:id="issueTypeComboBox" layoutX="123.0" layoutY="37.0" prefWidth="150.0" />
-      <Label layoutX="25.0" layoutY="41.0" text="Select Issue Type" />
+      <ComboBox fx:id="issueTypeComboBox" layoutX="122.0" layoutY="71.0" prefWidth="150.0" />
+      <Label layoutX="20.0" layoutY="75.0" text="Select Issue Type" />
       <TextArea fx:id="decriptionIssueTextArea" layoutX="386.0" layoutY="50.0" prefHeight="122.0" prefWidth="200.0" />
       <Label layoutX="408.0" layoutY="23.0" text="Short Description of the Issue" />
-      <Label layoutX="33.0" layoutY="93.0" text="Issue Date" />
-      <DatePicker fx:id="issueDateDatePicker" layoutX="111.0" layoutY="89.0" />
+      <Label layoutX="38.0" layoutY="115.0" text="Issue Date" />
+      <DatePicker fx:id="issueDateDatePicker" layoutX="110.0" layoutY="111.0" />
       <Label fx:id="feedBackLabel" layoutX="74.0" layoutY="141.0" prefHeight="42.0" prefWidth="175.0" text="FeedBack On Inputs" />
       <Button layoutX="460.0" layoutY="200.0" mnemonicParsing="false" onAction="#submitIssueButtonOnAction" text="Submit " />
       <TableView fx:id="issuetableView" layoutX="38.0" layoutY="246.0" prefHeight="200.0" prefWidth="524.0">
@@ -26,5 +26,6 @@
             <TableColumn fx:id="descriptionColoumn" prefWidth="372.79998779296875" text="Description" />
         </columns>
       </TableView>
+      <Button fx:id="backFXID" layoutX="32.0" layoutY="11.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

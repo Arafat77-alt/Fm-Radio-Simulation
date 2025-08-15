@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.BillOfAdvertisementController">
+<AnchorPane prefHeight="346.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.BillOfAdvertisementController">
    <children>
       <Label layoutX="61.0" layoutY="40.0" text="Ad title " />
       <ComboBox fx:id="adTitleComboBox" layoutX="115.0" layoutY="36.0" prefWidth="150.0" />
@@ -20,5 +20,6 @@
       <Button fx:id="billHistoryFXID" layoutX="215.0" layoutY="273.0" mnemonicParsing="false" onAction="#billHistoryButtonOnAction" text="See the pdf of all the bills" />
       <Button layoutX="77.0" layoutY="153.0" mnemonicParsing="false" onAction="#loadAdInfosForBillButtonOnAction" text="Load Ad infos" />
       <ComboBox fx:id="durationComboBox" layoutX="115.0" layoutY="84.0" prefWidth="150.0" />
+      <Button fx:id="backFXID" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

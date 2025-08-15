@@ -31,5 +31,6 @@
             <TableColumn fx:id="dateCreateplaylistCol" prefWidth="116.0" text="Date Created" />
          </columns>
       </TableView>
+      <Button fx:id="backFXID" layoutX="31.0" layoutY="16.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

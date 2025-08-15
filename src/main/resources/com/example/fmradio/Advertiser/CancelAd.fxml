@@ -23,5 +23,6 @@
       <Label layoutX="53.0" layoutY="45.0" text="Adt titles" />
       <Button layoutX="479.0" layoutY="104.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="74.0" prefWidth="51.0" text="Cancel" />
       <Button layoutX="299.0" layoutY="107.0" mnemonicParsing="false" onAction="#loadAdButtonOnAction" prefHeight="68.0" prefWidth="73.0" text="Load" />
+      <Button fx:id="backFXID" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

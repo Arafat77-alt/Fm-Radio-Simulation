@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.DiscountCodeGiveController">
+<AnchorPane prefHeight="424.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fmradio.Advertiser.DiscountCodeGiveController">
    <children>
       <TextField fx:id="discountCodeTextField" alignment="CENTER" layoutX="141.0" layoutY="29.0" />
       <Label layoutX="53.0" layoutY="82.0" text="Discount (%)" />
@@ -18,7 +18,7 @@
       <Label layoutX="57.0" layoutY="127.0" text="Expiry Date" />
       <Button layoutX="430.0" layoutY="42.0" mnemonicParsing="false" onAction="#submitButtonOnAction" prefHeight="50.0" prefWidth="104.0" text="Submit " />
       <Label fx:id="feedbackOnDiscountLabel" layoutX="409.0" layoutY="116.0" prefHeight="60.0" prefWidth="167.0" text="Feedback on the discount Entry" />
-      <TableView fx:id="discountCodeTableView" layoutX="40.0" layoutY="203.0" prefHeight="200.0" prefWidth="526.0">
+      <TableView fx:id="discountCodeTableView" layoutX="37.0" layoutY="212.0" prefHeight="200.0" prefWidth="526.0">
         <columns>
           <TableColumn fx:id="occasionColoumn" prefWidth="102.4000244140625" text="Occasion" />
           <TableColumn fx:id="discountColoumn" prefWidth="125.5999755859375" text="Discount" />
@@ -29,5 +29,6 @@
       <Label layoutX="36.0" layoutY="167.0" text="Select Occasion Category" />
       <ComboBox fx:id="selectoccasionCategoryComboBox" layoutX="183.0" layoutY="164.0" prefWidth="150.0" />
       <Label layoutX="19.0" layoutY="33.0" text="Enter Discount Code" />
+      <Button fx:id="backFXID" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

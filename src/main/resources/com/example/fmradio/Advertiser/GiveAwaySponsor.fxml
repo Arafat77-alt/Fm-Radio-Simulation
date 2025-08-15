@@ -28,5 +28,6 @@
         </columns>
       </TableView>
       <Button layoutX="409.0" layoutY="170.0" mnemonicParsing="false" onAction="#submitGiveAwayButtonOnAction" text="Submit" />
+      <Button fx:id="backFXID" layoutX="19.0" layoutY="2.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

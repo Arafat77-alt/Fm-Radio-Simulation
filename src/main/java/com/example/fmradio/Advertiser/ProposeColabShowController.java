@@ -21,6 +21,8 @@ public class ProposeColabShowController {
     private TextArea conceptSummaryTextArea;
     @javafx.fxml.FXML
     private Button promoHistoryFXID;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -61,6 +63,21 @@ public class ProposeColabShowController {
             ProposeColabHistoryController newController = myfxmlLoader.getController();
             dupstage.setScene(scene);
             newController.showPromoHistory(arr);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AdvertiserDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("AdvertiserDashBoard");
             dupstage.show();
 
         } catch (Exception e) {

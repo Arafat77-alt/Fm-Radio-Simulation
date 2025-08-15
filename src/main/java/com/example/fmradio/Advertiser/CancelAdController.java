@@ -1,12 +1,17 @@
 package com.example.fmradio.Advertiser;
 
+import com.example.fmradio.HelloApplication;
 import com.example.fmradio.Utility.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import javax.imageio.IIOException;
 import java.io.*;
@@ -31,6 +36,8 @@ public class CancelAdController {
     private TableColumn<Advertisement, Integer> durationMinutesColoumn;
     @javafx.fxml.FXML
     private TableColumn<Advertisement, String> adTitleColoumn;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
 
     @javafx.fxml.FXML
@@ -109,6 +116,21 @@ public class CancelAdController {
             oos.close();
         }
         catch (Exception e){
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AdvertiserDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("AdvertiserDashBoard");
+            dupstage.show();
+
+        } catch (Exception e) {
+
         }
     }
 }

@@ -12,10 +12,14 @@
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <Button fx:id="uploadAdvertisemenFXML" layoutX="72.0" layoutY="121.0" mnemonicParsing="false" onAction="#uploadAdvertisementOnAction" prefHeight="50.0" prefWidth="135.0" text="Upload Advertisement" />
+      <Button fx:id="uploadAdvertisemenFXML" layoutX="72.0" layoutY="114.0" mnemonicParsing="false" onAction="#uploadAdvertisementOnAction" prefHeight="68.0" prefWidth="156.0" text="Schedule Advertisement" />
       <Button fx:id="createPollFXID" layoutX="304.0" layoutY="119.0" mnemonicParsing="false" onAction="#createPollAdvertiserButtonOnaction" prefHeight="58.0" prefWidth="126.0" text="Create Poll / Contest" />
       <Button fx:id="billSummaryFXID" layoutX="590.0" layoutY="109.0" mnemonicParsing="false" onAction="#billSummaryOnAction" prefHeight="58.0" prefWidth="102.0" text="Billing Summary" />
-      <Button layoutX="72.0" layoutY="253.0" mnemonicParsing="false" onAction="#genetrateListenerReportOnAction" prefHeight="50.0" prefWidth="148.0" text="Generate Listener Report" />
-      <Button fx:id="sponsorPLaylistFXID" layoutX="317.0" layoutY="245.0" mnemonicParsing="false" onAction="#platylistSponsorOnAction" prefHeight="66.0" prefWidth="100.0" text="Playlist Sponsor" />
+      <Button fx:id="sponsorPLaylistFXID" layoutX="304.0" layoutY="402.0" mnemonicParsing="false" onAction="#platylistSponsorOnAction" prefHeight="75.0" prefWidth="135.0" text="Playlist Sponsor" />
+      <Button fx:id="asDiscountFXID" layoutX="72.0" layoutY="251.0" mnemonicParsing="false" onAction="#adDiscountButtonOnAction" prefHeight="75.0" prefWidth="156.0" text="Add Discount Code" />
+      <Button fx:id="cancelAdFXID" layoutX="306.0" layoutY="255.0" mnemonicParsing="false" onAction="#cancelAdButtonOnAction" prefHeight="68.0" prefWidth="135.0" text="Cancel ad" />
+      <Button fx:id="proposeColabFXID" layoutX="558.0" layoutY="245.0" mnemonicParsing="false" onAction="#proposeColabShowFXID" prefHeight="86.0" prefWidth="166.0" text="Propose Collaboration Show" />
+      <Button fx:id="giveAwayFXID" layoutX="63.0" layoutY="402.0" mnemonicParsing="false" onAction="#giveAwayButtonONAction" prefHeight="75.0" prefWidth="174.0" text="Register Sponsored Giveaway" />
+      <Button fx:id="backFXID" layoutX="37.0" layoutY="21.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

@@ -40,6 +40,8 @@ public class CreatePlaylistController
     private TableColumn<CreatePlayList, LocalDate> dateCreateplaylistCol;
     @javafx.fxml.FXML
     private TableColumn<CreatePlayList, Integer> numberSongCol;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -120,5 +122,18 @@ public class CreatePlaylistController
     }
 
 
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ListenerDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+            dupstage.setScene(scene);
+            dupstage.setTitle("Listener DashBoard");
+            dupstage.show();
 
+        } catch (Exception e) {
+
+        }
+    }
 }

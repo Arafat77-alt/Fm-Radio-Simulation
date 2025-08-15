@@ -12,12 +12,14 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="79.0" layoutY="124.0" mnemonicParsing="false" onAction="#songRequestButton" prefHeight="60.0" prefWidth="90.0" text="Song Request" />
+      <Button fx:id="songRequestFXID" layoutX="79.0" layoutY="124.0" mnemonicParsing="false" onAction="#songRequestButton" prefHeight="60.0" prefWidth="90.0" text="Song Request" />
       <Button fx:id="pollParticipationDashFXID" layoutX="301.0" layoutY="118.0" mnemonicParsing="false" onAction="#pollParticipationButtonOnAction" prefHeight="72.0" prefWidth="106.0" text="Poll participation" />
       <Button fx:id="rateShowDashFXID" layoutX="529.0" layoutY="115.0" mnemonicParsing="false" onAction="#rateShowButtonOnAction" prefHeight="72.0" prefWidth="90.0" text="Rate Show" />
-      <Button fx:id="bookMarkDashFXID" layoutX="87.0" layoutY="302.0" mnemonicParsing="false" onAction="#bookMarkButtonOnAction" prefHeight="86.0" prefWidth="106.0" text="Book Mark" />
-      <Button fx:id="reportShowDashFXID" layoutX="315.0" layoutY="302.0" mnemonicParsing="false" onAction="#reportButtonOnAction" prefHeight="86.0" prefWidth="100.0" text="Report" />
-      <Button layoutX="529.0" layoutY="302.0" mnemonicParsing="false" onAction="#songHistoryButtonOnAction" prefHeight="86.0" prefWidth="106.0" text="Song History" />
-      <Button fx:id="createPlaylistFXID" layoutX="79.0" layoutY="442.0" mnemonicParsing="false" onAction="#createPlaylistDashBoardButtonOnAction" prefHeight="60.0" prefWidth="90.0" text="Create Playlist" />
+      <Button fx:id="bookMarkDashFXID" layoutX="71.0" layoutY="274.0" mnemonicParsing="false" onAction="#bookMarkButtonOnAction" prefHeight="86.0" prefWidth="106.0" text="Book Mark" />
+      <Button fx:id="reportShowDashFXID" layoutX="315.0" layoutY="266.0" mnemonicParsing="false" onAction="#reportButtonOnAction" prefHeight="86.0" prefWidth="100.0" text="Report Show" />
+      <Button fx:id="createPlaylistFXID" layoutX="549.0" layoutY="266.0" mnemonicParsing="false" onAction="#createPlaylistDashBoardButtonOnAction" prefHeight="60.0" prefWidth="90.0" text="Create Playlist" />
+      <Button fx:id="dedicateSongFXID" layoutX="77.0" layoutY="416.0" mnemonicParsing="false" onAction="#dedicateSongOnButtonOnAction" prefHeight="86.0" prefWidth="94.0" text="Dedicate Song" />
+      <Button fx:id="technicalIssueFXID" layoutX="315.0" layoutY="423.0" mnemonicParsing="false" onAction="#technicalIssueReportButtonDash" prefHeight="86.0" prefWidth="127.0" text="Report Tecnical Issue" />
+      <Button fx:id="backFXID" layoutX="27.0" layoutY="18.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

@@ -23,6 +23,14 @@ public class ListenerDashboardController
     private Button rateShowDashFXID;
     @javafx.fxml.FXML
     private Button pollParticipationDashFXID;
+    @javafx.fxml.FXML
+    private Button songRequestFXID;
+    @javafx.fxml.FXML
+    private Button dedicateSongFXID;
+    @javafx.fxml.FXML
+    private Button technicalIssueFXID;
+    @javafx.fxml.FXML
+    private Button backFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -41,10 +49,6 @@ public class ListenerDashboardController
         } catch (Exception e) {
 
         }
-    }
-
-    @javafx.fxml.FXML
-    public void songHistoryButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -110,6 +114,52 @@ public class ListenerDashboardController
             Scene scene = new Scene(fxmlLoader.load());
             Stage dupstage = (Stage) createPlaylistFXID.getScene().getWindow();
             dupstage.setTitle("createplaylist view");
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void dedicateSongOnButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("dedicateSong.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) dedicateSongFXID.getScene().getWindow();
+
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void technicalIssueReportButtonDash(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ReportTechnicalIssue.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) technicalIssueFXID.getScene().getWindow();
+
+            dupstage.setScene(scene);
+            dupstage.show();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LogIn.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dupstage = (Stage) backFXID.getScene().getWindow();
+
             dupstage.setScene(scene);
             dupstage.show();
 
