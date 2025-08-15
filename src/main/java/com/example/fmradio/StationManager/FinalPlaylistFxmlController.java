@@ -4,10 +4,16 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 public class FinalPlaylistFxmlController
 {
@@ -95,7 +101,21 @@ public class FinalPlaylistFxmlController
     public void approvePlaylistOA(ActionEvent actionEvent) {
         statusLabel.setText("The playlist has been approved for broadcast.");
     }
-    @javafx.fxml.FXML
-    public void backToMainMenuOA(ActionEvent actionEvent) {
+    @FXML
+    public void mainMenuOA(ActionEvent actionEvent) {
+        loadStationManagerScene(actionEvent);
     }
+
+    private void loadStationManagerScene(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("StationManagerFxml.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

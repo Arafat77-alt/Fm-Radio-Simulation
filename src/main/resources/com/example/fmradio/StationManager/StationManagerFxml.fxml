@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
@@ -12,12 +11,10 @@
       <Button layoutX="57.0" layoutY="324.0" mnemonicParsing="false" onAction="#emergencyShowCancellationOA" text="Emergency Show Cancellation" />
       <Button layoutX="69.0" layoutY="242.0" mnemonicParsing="false" onAction="#teamMeetingOA" text=" Team Meeting" />
       <Button layoutX="410.0" layoutY="68.0" mnemonicParsing="false" onAction="#teamPerformanceOA" text="Team Performance" />
-      <Button layoutX="385.0" layoutY="149.0" mnemonicParsing="false" onAction="#socialMediaOA" text=" Social Media Engagement" />
+      <Button layoutX="385.0" layoutY="149.0" mnemonicParsing="false" onAction="#socialMediaEngagementOA" text=" Social Media Engagement" />
       <Button layoutX="417.0" layoutY="242.0" mnemonicParsing="false" onAction="#approveFinalPlaylistOA" text="Approve Final Playlist" />
       <Button layoutX="428.0" layoutY="336.0" mnemonicParsing="false" onAction="#advertiserSlotOA" text=" Advertiser Slot" />
       <Button layoutX="493.0" layoutY="453.0" mnemonicParsing="false" onAction="#singoutOA" text="Signout" />
       <Line endX="26.0" endY="245.0" layoutX="274.0" layoutY="115.0" startX="26.0" startY="-46.333335876464844" />
-      <Label fx:id="messageLabel" layoutX="113.0" layoutY="414.0" prefHeight="77.0" prefWidth="271.0" text="Label" />
-      <Label layoutX="55.0" layoutY="436.0" text="Message" />
    </children>
 </AnchorPane>
