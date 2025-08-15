@@ -20,7 +20,7 @@
       <Button layoutX="348.0" layoutY="350.0" mnemonicParsing="false" onAction="#approvePlaylistOA" text="Approve Playlist" />
       <Button layoutX="198.0" layoutY="350.0" mnemonicParsing="false" onAction="#checkDuplicateOA" text="Check Duplicate" />
       <Button layoutX="494.0" layoutY="350.0" mnemonicParsing="false" onAction="#notifyProducerAndRjOA" text="Notify Producer and Rj" />
-      <Button layoutX="529.0" layoutY="441.0" mnemonicParsing="false" onAction="#backToMainMenuOA" text="Back to Main Menu" />
+      <Button layoutX="529.0" layoutY="441.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Mainmenu" />
       <Button layoutX="41.0" layoutY="350.0" mnemonicParsing="false" onAction="#receivePlaylistOA" text="Receive Playlist" />
       <Label fx:id="statusLabel" layoutX="137.0" layoutY="433.0" prefHeight="53.0" prefWidth="321.0" />
       <Label layoutX="75.0" layoutY="445.0" text="Status" />

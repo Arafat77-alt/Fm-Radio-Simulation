@@ -32,7 +32,7 @@
       </TableView>
       <Button layoutX="41.0" layoutY="407.0" mnemonicParsing="false" onAction="#assignOA" text="Assign" />
       <Button layoutX="205.0" layoutY="407.0" mnemonicParsing="false" onAction="#notifyOA" text="Notify" />
-      <Button layoutX="320.0" layoutY="407.0" mnemonicParsing="false" onAction="#backToMainMenuOA" prefHeight="25.0" prefWidth="141.0" text="Back to Main Menu" />
+      <Button layoutX="320.0" layoutY="407.0" mnemonicParsing="false" onAction="#mainMenuOA" prefHeight="25.0" prefWidth="141.0" text="Mainmenu" />
       <TextField fx:id="assignRjTF" layoutX="105.0" layoutY="40.0" />
       <TextField fx:id="assignProducerTF" layoutX="105.0" layoutY="77.0" />
       <TextArea fx:id="performanceReportTA" layoutX="279.0" layoutY="22.0" prefHeight="159.0" prefWidth="200.0" />

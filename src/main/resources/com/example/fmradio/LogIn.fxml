@@ -12,7 +12,9 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button fx:id="listenerButtonFXML" layoutX="234.0" layoutY="93.0" mnemonicParsing="false" onAction="#listenerButtonLogInOnAction" prefHeight="40.0" prefWidth="106.0" text="Listener " />
-      <Button fx:id="advertiserFXID" layoutX="234.0" layoutY="171.0" mnemonicParsing="false" onAction="#AdvertiserButtonLogInOnAction" prefHeight="40.0" prefWidth="106.0" text="Advertiser " />
+      <Button fx:id="listenerButtonFXML" layoutX="429.0" layoutY="93.0" mnemonicParsing="false" onAction="#listenerButtonLogInOnAction" prefHeight="40.0" prefWidth="106.0" text="Listener " />
+      <Button fx:id="advertiserFXID" layoutX="415.0" layoutY="232.0" mnemonicParsing="false" onAction="#AdvertiserButtonLogInOnAction" prefHeight="40.0" prefWidth="106.0" text="Advertiser " />
+      <Button fx:id="stationManagerBtn" layoutX="86.0" layoutY="93.0" mnemonicParsing="false" onAction="#stationManagerOA" prefHeight="40.0" prefWidth="131.0" text="Station Manager" />
+      <Button fx:id="producerBtn" layoutX="95.0" layoutY="235.0" mnemonicParsing="false" onAction="#producerOA" prefHeight="33.0" prefWidth="114.0" text="Producer" />
    </children>
 </AnchorPane>

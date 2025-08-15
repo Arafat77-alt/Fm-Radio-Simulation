@@ -4,9 +4,14 @@ package com.example.fmradio.Producer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -125,7 +130,21 @@ public class AssignPlaylistFxmlController {
 
     @FXML
     public void mainMenuOA(ActionEvent actionEvent) {
-        messageLabel.setText("Main menu button clicked!");
-        messageLabel.setStyle("-fx-text-fill: purple;");
+        loadProducerScene(actionEvent);
     }
+    private void loadProducerScene(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ProducerFxml.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
+

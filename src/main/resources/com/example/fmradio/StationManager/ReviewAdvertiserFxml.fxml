@@ -26,7 +26,7 @@
       <Button layoutX="59.0" layoutY="53.0" mnemonicParsing="false" onAction="#loadAdReportOA" text="Load Ad Report" />
       <Button layoutX="327.0" layoutY="53.0" mnemonicParsing="false" onAction="#viewContractTermsOA" text="View Contract Terms" />
       <Label fx:id="messageLabel" layoutX="36.0" layoutY="104.0" prefHeight="84.0" prefWidth="200.0" text="Label" />
-      <Button layoutX="375.0" layoutY="188.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Main Menu" />
+      <Button layoutX="375.0" layoutY="188.0" mnemonicParsing="false" onAction="#mainMenuOA" text="Mainmenu" />
       <Button layoutX="47.0" layoutY="201.0" mnemonicParsing="false" onAction="#checkConflictsOA" text="Check Conflicts" />
    </children>
 </AnchorPane>

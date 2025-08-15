@@ -3,8 +3,14 @@ package com.example.fmradio.StationManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
@@ -125,9 +131,23 @@ public class WeeklyProgramFxmlController {
         showDateDP.setValue(null);
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void mainMenuOA(ActionEvent actionEvent) {
+        loadStationManagerScene(actionEvent);
     }
+
+    private void loadStationManagerScene(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("StationManagerFxml.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
 

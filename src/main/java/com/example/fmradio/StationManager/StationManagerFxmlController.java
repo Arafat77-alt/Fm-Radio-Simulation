@@ -1,117 +1,90 @@
 package com.example.fmradio.StationManager;
 
+import javafx.event.ActionEvent;
 
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 
 public class StationManagerFxmlController {
 
-    private Stage stage;
-
-    @javafx.fxml.FXML
-    private Label messageLabel;  // This will link to your FXML Label
-
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
-        // Initialization logic if needed
     }
 
-    @javafx.fxml.FXML
-    public void approveFinalPlaylistOA(ActionEvent actionEvent) {
-        loadScene("FinalPlaylistFxml.fxml");
-    }
-
-    @Deprecated
-    public void reviewSocialMediaOA(ActionEvent actionEvent) {
-        loadScene("SocialMediaFxml.fxml");
-    }
-
-    @javafx.fxml.FXML
-    public void teamPerformanceOA(ActionEvent actionEvent) {
-        loadScene("TeamPerformanceFxml.fxml");
-    }
-
-    @javafx.fxml.FXML
-    public void weeklyProgramOA(ActionEvent actionEvent) {
-        loadScene("WeeklyProgramFxml.fxml");
-    }
-
-    @javafx.fxml.FXML
-    public void assignRjAndProducerOA(ActionEvent actionEvent) {
-        loadScene("AssignFxml.fxml");
-    }
-
-    @javafx.fxml.FXML
-    public void emergencyShowCancellationOA(ActionEvent actionEvent) {
-        loadScene("EmergencyCancelFxml.fxml");
-    }
-
-    @javafx.fxml.FXML
-    public void singoutOA(ActionEvent actionEvent) {
-        // Handle sign out or logout logic
-    }
-
-    @Deprecated
-    public void reviewAdvertiserSlotOA(ActionEvent actionEvent) {
-        loadScene("ReviewAdvertiserFxml.fxml");
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void teamMeetingOA(ActionEvent actionEvent) {
-        loadScene("TeamMeetingFxml.fxml");
+        loadScene("TeamMeetingFxml.fxml", actionEvent);
     }
 
-    private void loadScene(String fxmlFileName) {
+    @FXML
+    public void approveFinalPlaylistOA(ActionEvent actionEvent) {
+        loadScene("FinalPlaylistFxml.fxml", actionEvent);
+    }
+
+    @FXML
+    public void teamPerformanceOA(ActionEvent actionEvent) {
+        loadScene("TeamPerformanceFxml.fxml", actionEvent);
+    }
+
+    @FXML
+    public void weeklyProgramOA(ActionEvent actionEvent) {
+        loadScene("WeeklyProgramFxml.fxml", actionEvent);
+    }
+
+    @FXML
+    public void assignRjAndProducerOA(ActionEvent actionEvent) {
+        loadScene("AssignFxml.fxml", actionEvent);
+    }
+
+    @FXML
+    public void socialMediaEngagementOA(ActionEvent actionEvent) {
+        loadScene("SocialMediaFxml.fxml", actionEvent);
+    }
+
+    @FXML
+    public void emergencyShowCancellationOA(ActionEvent actionEvent) {
+        loadScene("EmergencyShowCancelFxml.fxml", actionEvent);
+    }
+
+    @FXML
+    private void signoutOA(ActionEvent event) {
         try {
-            // Ensure the FXML file path is correct
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/fmradio/StationManager/" + fxmlFileName));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fmradio/Login.fxml"));
+            Parent root = loader.load();
 
-            if (fxmlLoader.getLocation() == null) {
-                throw new IOException("FXML file not found: " + fxmlFileName);
-            }
 
-            // Load the FXML file
-            StackPane root = fxmlLoader.load();
-            Scene scene = new Scene(root);
-            stage = (Stage) root.getScene().getWindow();
-            stage.setScene(scene);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            showAlert("Error", "Failed to load scene: " + fxmlFileName + "\n" + e.getMessage());
-            e.printStackTrace();  // Print the stack trace for debugging
+            e.printStackTrace();
         }
     }
 
-    // Method to show alerts
-    private void showAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
 
-        // Assuming messageLabel is initialized properly and linked to FXML
-        messageLabel.setText(message);
-    }
 
-    // This method is called when you want to go back to the main menu
-    public void backToMainMenu() {
-        loadScene("StationManagerMainMenu.fxml");  // Make sure this FXML exists
-    }
-
-    @javafx.fxml.FXML
-    public void socialMediaOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void advertiserSlotOA(ActionEvent actionEvent) {
+        loadScene("ReviewAdvertiserFxml.fxml", actionEvent);
+    }
+
+    private void loadScene(String fxmlFile, ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
